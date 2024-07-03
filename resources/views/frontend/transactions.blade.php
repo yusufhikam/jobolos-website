@@ -7,7 +7,7 @@
 @section('content')
 
 
-    <div class="content-container " style="margin-top:6rem; ">
+    <div class="content-container " style="margin-block:7rem; ">
         <h1 class="text-center mt-5 mb-3">Hello, {{ ucwords(Auth::user()->name) }}!</h1>
         @if ($transaction->isEmpty())
             <section class="content mb-4">
