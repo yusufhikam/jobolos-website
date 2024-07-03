@@ -7,7 +7,7 @@
 @section('content')
 
 
-    <div class="content-container " style="margin-block:7rem;">
+    <div class="content-container " style="margin-top:7rem; margin-bottom:7rem;">
         <h1 class="text-center mt-5 mb-3">Hello, {{ ucwords(Auth::user()->name) }}!</h1>
 
         <h4 class="m-auto text-center mb-3 col-lg-6">Thank you for using our services. See you at the photo shoot.
