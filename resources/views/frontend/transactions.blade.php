@@ -39,7 +39,7 @@
                     Transfer</b> with the account number below.
             </h4>
             <hr class="text-center m-auto text-success w-75 border-3">
-            <section class="content mb-4">
+            <section class="content">
                 <div class="container-fluid">
                     @foreach ($bankAccounts as $bank)
                         <div class="d-flex row">
