@@ -42,13 +42,10 @@
                                 </div>
                                 <!-- timeline item -->
                                 <div>
-
                                     <i class="fas fa-bell bg-blue"></i>
                                     <div class="timeline-item">
-
                                         <h3 class="timeline-header">Detail Booking
                                         </h3>
-
                                         <div class="timeline-body">
                                             <div class="d-flex justify-content-between ">
                                                 <p>BOOKING CODE :
@@ -307,6 +304,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                             @endforeach
                         </div>
 
