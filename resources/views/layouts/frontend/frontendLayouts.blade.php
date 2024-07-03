@@ -183,9 +183,9 @@
     {{-- End Carousel --}}
 
     {{-- Content --}}
-    {{-- <section style="margin-top: 4.3rem;"> --}}
-    @yield('content')
-    {{-- </section> --}}
+    <section style="margin-top: 4.3rem;">
+        @yield('content')
+    </section>
     @include('sweetalert::alert')
 
     {{-- End Content --}}
