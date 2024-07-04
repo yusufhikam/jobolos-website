@@ -21,8 +21,14 @@
                                         class="card-img-top img-fluid" alt="...">
                                     @if ($camera->rentals->isNotEmpty() && $camera->rentals->first()->status == 'active')
                                         <div class="ribbon-wrapper ribbon-xl">
-                                            <div class="ribbon bg-primary text-md">
+                                            <div class="ribbon bg-warning text-md">
                                                 Currently Rented
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="ribbon-wrapper ribbon-xl">
+                                            <div class="ribbon bg-primary text-md">
+                                                Available
                                             </div>
                                         </div>
                                     @endif
