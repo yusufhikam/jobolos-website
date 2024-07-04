@@ -182,7 +182,7 @@
     <div class="container">
         <div class="card-header">
             <div class="text-center">
-                <img src="{{ 'data:image/png;base64,' . base64_encode(file_get_contents(public_path('storage/frontend_assets/brand-logo/jobolos-logo-black.png'))) }}"
+                <img src="{{ 'data:image/png;base64,' . base64_encode(file_get_contents(asset('/storage/frontend_assets/brand-logo/jobolos-logo-black.png'))) }}"
                     alt="Jobolos Logo" class="brand-logo">
                 <h1 class="brand-title">JOBOLOS RENTAL CAMERA REMBANG</h1>
                 <h5 class="detail-heading">Photoshoot Booking Confirmation Detail</h5>
