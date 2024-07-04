@@ -38,12 +38,14 @@
             <hr class="text-center m-auto text-success w-75 border-3">
             <section class="content mb-4">
                 <div class="container-fluid">
-                    <div class="d-flex row">
-                        <h3 class="mt-5 mx-auto text-center bg-success rounded-pill p-3 col-auto">(BRI) 6032
-                            0102 3297 534</h3>
-                        <h4 class="mb-5 text-center">A.N Yusuf Hikam</h4>
-                    </div>
-
+                    @foreach ($bankRentalAccounts as $bank)
+                        <div class="d-flex row">
+                            <h3 class="mt-5 mx-auto text-center bg-success rounded-pill p-3 col-auto">
+                                ({{ $bank->bank_name }})
+                                {{ $bank->no_rek }}</h3>
+                            <h4 class="mb-5 text-center">A.N / {{ $bank->name }}</h4>
+                        </div>
+                    @endForeach
                     <div class="d-flex justify-content-center">
                         <div class="card col-lg-7">
                             <div class="d-flex justify-content-between">

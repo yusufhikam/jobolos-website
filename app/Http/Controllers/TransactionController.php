@@ -111,10 +111,13 @@ class TransactionController extends Controller
 
         $hasApprovedPayment = $transaction->pluck('rentalPayments')->flatten()->contains('status', 'approved');
 
+        // bank account
+        $bankRentalAccounts = BankAccount::all();
+
         // dd($transaction);
         $codeBooking = Rental::count();
 
-        return view('frontend.rental-transaction', compact('transaction', 'codeBooking', 'hasApprovedPayment'));
+        return view('frontend.rental-transaction', compact('transaction', 'codeBooking', 'hasApprovedPayment', 'bankRentalAccounts'));
     }
 
     // UNTUK MENAMPILKAN DAFTAR DATA RIWAYAT TRANSAKSI RENTAL KAMERA
