@@ -20,10 +20,12 @@ class BookingController extends Controller
 
         $bookings = Booking::select('tanggal')->get();
         $bookedDates = $bookings->pluck('tanggal')->toArray();
+
+        $paket = Package::all();
         // $package = Booking::with('packages')->get();
 
 
-        return view('frontend.photoshoot-booking', compact('bookedDates'));
+        return view('frontend.photoshoot-booking', compact('bookedDates', 'paket'));
     }
 
 

@@ -44,7 +44,7 @@
                                         <label for="packages" class="form-label text-secondary">Packages</label>
                                         <select class="form-select" name="package_id" id="packages">
                                             <option value="">-- Select Packages --</option>
-                                            @foreach ($packages as $pcg)
+                                            @foreach ($paket as $pcg)
                                                 <option value="{{ $pcg->id }}">{{ $pcg->name }}</option>
                                             @endforeach
                                         </select>
