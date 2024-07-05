@@ -116,10 +116,12 @@
                                                 @endif --}}
 
                                                 @if ($bookList->status == 'waiting' || $bookList->status == 'active')
-                                                    <div class="alert alert-success d-flex align-items-center"
+                                                    <div class="alert alert-primary d-flex align-items-center col-lg-8"
                                                         role="alert">
                                                         <div>
-                                                            <h5>Mohon Cek Email Anda secara berkala, setelah dikonfirmasi
+                                                            <h5><i class="fa-solid fa-circle-check"
+                                                                    style="color: #008009;"></i> Mohon Cek Email Anda secara
+                                                                berkala, setelah dikonfirmasi
                                                                 INVOICE akan dikirim ke email Anda.</h5>
                                                         </div>
                                                     </div>
