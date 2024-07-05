@@ -164,23 +164,34 @@
 
                                                         <div class="col">
                                                             <div class="row">
-                                                                <label class="fw-bold">Event Location :
-                                                                </label>
-                                                                <div
-                                                                    class="col mx-3 mb-3 bg-body-tertiary border rounded p-3">
-                                                                    <div class="row">
-                                                                        @if ($bookList->location_type == 'other')
-                                                                            <p>Location : Luar Kota</p>
-                                                                        @else
-                                                                            <p>Location :
-                                                                                {{ ucwords($bookList->location_type) }}
-                                                                            </p>
-                                                                        @endif
-                                                                        <hr class="w-25 ms-2 float-start border-2">
+                                                                <div class="col-lg-6">
+                                                                    <label class="fw-bold">Event Location :
+                                                                    </label>
+                                                                    <div
+                                                                        class="col mx-3 mb-3 bg-body-tertiary border rounded p-3">
+                                                                        <div class="row">
+                                                                            @if ($bookList->location_type == 'other')
+                                                                                <p>Location : Luar Kota</p>
+                                                                            @else
+                                                                                <p>Location :
+                                                                                    {{ ucwords($bookList->location_type) }}
+                                                                                </p>
+                                                                            @endif
+                                                                            <hr class="w-25 ms-2 float-start border-2">
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <p>Detail Location :</p>
+                                                                            <p>{{ ucwords($bookList->location) }}</p>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="row">
-                                                                        <p>Detail Location :</p>
-                                                                        <p>{{ ucwords($bookList->location) }}</p>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <label class="fw-bold">Concept :
+                                                                    </label>
+                                                                    <div
+                                                                        class="col mx-3 mb-3 bg-body-tertiary border rounded p-3">
+
+                                                                        <p>{{ ucwords($bookList->concept) }}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
