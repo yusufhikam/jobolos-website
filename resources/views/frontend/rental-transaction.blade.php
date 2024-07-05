@@ -288,10 +288,17 @@
                                                         @endif
                                                         {{-- @endforeach --}}
                                                     </div>
-                                                    <div class="col-lg-3">
-                                                        <a href="" class="btn btn-danger d-block"
-                                                            style="font-size: 10pt;">Cancel</a>
-                                                    </div>
+                                                    @if ($bookList->$hasPendingPayment)
+                                                        <div class="col-lg-3">
+                                                            <a href="" class="btn btn-danger d-block disabled"
+                                                                style="font-size: 10pt;">Cancel</a>
+                                                        </div>
+                                                    @else
+                                                        <div class="col-lg-3">
+                                                            <a href="" class="btn btn-danger d-block"
+                                                                style="font-size: 10pt;">Cancel</a>
+                                                        </div>
+                                                    @endif
                                                 </div>
                                             </div>
 
