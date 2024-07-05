@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use App\Models\Booking;
+use App\Models\Brand;
 use App\Models\Camera;
+use App\Models\CameraType;
 use App\Models\Category;
 use App\Models\Crew;
 use App\Models\Package;
 use App\Models\Photo;
+use App\Models\Rental;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -33,6 +36,7 @@ class FrontendController extends Controller
         return view('frontend.home', compact('albums', 'homeCameraInfo'));
     }
 
+    // METHOD UNTUK HALAMAN ABOUT US
     public function about()
     {
         $crews = Crew::all();
@@ -89,13 +93,42 @@ class FrontendController extends Controller
 
     // METHOD UNTUK MENAMPILKAN DAFTAR KAMERA
 
-    public function camera_info()
+    public function camera_info(Request $request)
     {
+
+        $brandFiltering = $request->brand;
+        $cameraTypeFiltering = $request->camera_type;
+        $statusFiltering = $request->status;
+
+        // mengambil data tipe kamera dan brands untuk filtering
+        $cameraTypes = CameraType::with('brands')->select('id', 'name', 'brand_id')->get();
+        $brands = Brand::select('id', 'name')->get();
+
         $cameras = Camera::with(['camera_types.brands', 'rentals' => function ($query) {
             $query->where('status', 'active');
-        }])->get();
+        }])
+            ->when($brandFiltering, function ($query, $brandFiltering) {
+                return $query->whereHas('camera_types.brands', function ($q) use ($brandFiltering) {
+                    $q->where('id', $brandFiltering);
+                });
+            })->when($cameraTypeFiltering, function ($query, $cameraTypeFiltering) {
+                return $query->where('camera_type_id', $cameraTypeFiltering);
+            })->when($statusFiltering, function ($query, $statusFiltering) {
+                if ($statusFiltering == '!active') {
+                    return $query->whereDoesntHave('rentals', function ($q) {
+                        $q->where('status', 'active');
+                    });
+                } else {
+                    return $query->whereHas('rentals', function ($q) use ($statusFiltering) {
+                        $q->where('status', $statusFiltering);
+                    });
+                }
+            })->paginate(20);
 
-        return view('frontend.camera-info', compact('cameras'));
+
+
+
+        return view('frontend.camera-info', compact('cameras', 'cameraTypes', 'brands'));
     }
     // METHOD UNTUK MENAMPILKAN DETAIL DATA KAMERA
     public function camera_detail($id, $name)
