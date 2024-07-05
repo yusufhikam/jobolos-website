@@ -125,11 +125,10 @@ class TransactionController extends Controller
     {
         $transaction = Rental::with(['cameras', 'lenses', 'rentalPayments'])
             ->where('user_id', auth()->id())
-            ->where('status', 'completed')
-            ->orWhere('status', 'cancelled')
-            // ->whereHas('rentalPayments', function ($query) {
-            //     $query->where('status_pembayaran', 'approved');
-            // })
+            ->where(function ($query) {
+                $query->where('status', 'completed')
+                    ->orWhere('status', 'cancelled');
+            })
             ->orderBy('created_at', 'desc')->get();
 
         $codeBooking = Rental::count();

@@ -54,12 +54,12 @@
                                                 <p>BOOKING CODE :
                                                     PC-{{ str_pad($bookList->id, 4, '0', STR_PAD_LEFT) }}-{{ $codeBooking }}
                                                 </p>
-                                                @if ($bookList->status == 'complete')
+                                                @if ($bookList->status == 'completed')
                                                     <p>Status Pembayaran : <span
                                                             class="bg-primary rounded p-1 d-inline-block">
                                                             <i class="fa-regular fa-circle-check"></i> Completed
                                                         </span>
-                                                    @elseif($bookList->status == 'cancelled')
+                                                    @elseif ($bookList->status == 'cancelled')
                                                     <p>Status Pembayaran : <span
                                                             class="bg-danger rounded p-1 d-inline-block">
                                                             <i class="fa-solid fa-circle-exclamation"></i>
