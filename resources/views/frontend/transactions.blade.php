@@ -118,6 +118,17 @@
                                                         it. </p>
                                                 @endif --}}
 
+                                                @if ($bookList->status_pembayaran == 'completed' || $bookList->payments->status == 'approved')
+                                                    <div class="alert alert-primary d-flex align-items-center justify-content-center mt-3"
+                                                        role="alert">
+                                                        <div>
+                                                            <h5><i class="fa-solid fa-circle-check"
+                                                                    style="color: #008009;"></i> Mohon Cek Email Anda secara
+                                                                berkala, setelah dikonfirmasi
+                                                                INVOICE akan dikirim ke email Anda.</h5>
+                                                        </div>
+                                                    </div>
+                                                @endif
                                                 <div class="d-flex my-2">
                                                     <div class="m-2 col-lg-12">
 
