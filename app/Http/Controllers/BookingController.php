@@ -21,7 +21,7 @@ class BookingController extends Controller
         $bookings = Booking::select('tanggal')->get();
         $bookedDates = $bookings->pluck('tanggal')->toArray();
 
-        $paket = Package::all();
+        $paket = Package::orderBy('name', 'asc')->get();
         // $package = Booking::with('packages')->get();
 
 
