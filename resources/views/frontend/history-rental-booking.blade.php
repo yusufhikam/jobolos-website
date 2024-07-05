@@ -199,7 +199,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="p-3">
+                                        {{-- <div class="p-3">
                                             <div class="row g-2 justify-content-center">
 
                                                 <div class="col-lg-3">
@@ -208,7 +208,7 @@
                                                         DOWNLOAD INVOICE</a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
 
                                         <!-- Modal Upload Bukti Pembayaran-->
                                         <div class="modal fade" id="staticBackdrop{{ $bookList->id }}"
@@ -234,8 +234,7 @@
                                                                     <label class="form-label" for="inputGroupFile01">Upload
                                                                         File</label>
                                                                     <input type="file" name="bukti_pembayaran"
-                                                                        class="form-control" id="inputGroupFile01"
-                                                                        required>
+                                                                        class="form-control" id="inputGroupFile01" required>
 
                                                                 </div>
 
