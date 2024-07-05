@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="jumbotrons text-center mt-2 ">
-                    <h5>Thank You</h5>
+                    <h5>Terimakasih</h5>
 
                     <hr class="jumbotrons-hr border-3 w-25 m-auto my-4">
 
