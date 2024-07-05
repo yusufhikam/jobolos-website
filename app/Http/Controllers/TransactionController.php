@@ -126,6 +126,7 @@ class TransactionController extends Controller
         $transaction = Rental::with(['cameras', 'lenses', 'rentalPayments'])
             ->where('user_id', auth()->id())
             ->where('status', 'completed')
+            ->where('status', 'cancelled')
             // ->whereHas('rentalPayments', function ($query) {
             //     $query->where('status_pembayaran', 'approved');
             // })
@@ -151,6 +152,6 @@ class TransactionController extends Controller
 
         Alert::success('Success!', 'Your Booking has been Canceled.');
 
-        return redirect('/jobolos/rental-transaction');
+        return redirect('/jobolos/rental-transactions');
     }
 }

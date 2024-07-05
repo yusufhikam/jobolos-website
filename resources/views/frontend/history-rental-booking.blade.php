@@ -54,34 +54,16 @@
                                                 <p>BOOKING CODE :
                                                     PC-{{ str_pad($bookList->id, 4, '0', STR_PAD_LEFT) }}-{{ $codeBooking }}
                                                 </p>
-                                                @if ($bookList->status == 'pending')
+                                                @if ($bookList->status == 'complete')
                                                     <p>Status Pembayaran : <span
-                                                            class="bg-warning rounded p-1 d-inline-block"><i
-                                                                class="fa-solid fa-hand-holding-dollar"></i> Waiting for
-                                                            payment...</span></p>
-                                                @else
-                                                    @php
-                                                        $payment = $bookList->rentalPayments->last();
-                                                    @endphp
-                                                    @if ($payment)
-                                                        @if ($payment->status_pembayaran == 'pending')
-                                                            <p>Status Pembayaran : <span class=" rounded p-1 d-inline-block"
-                                                                    style="background-color: #00a5cf; color:aliceblue;"><i
-                                                                        class="fa fa-regular fa-clock"></i> Waiting for
-                                                                    Confirmation</span></p>
-                                                        @elseif($payment->status_pembayaran == 'approved')
-                                                            <p>Status Pembayaran : <span
-                                                                    class="bg-primary rounded p-1 d-inline-block">
-                                                                    <i class="fa-regular fa-circle-check"></i> PAID
-                                                                </span>
-                                                            </p>
-                                                        @elseif ($payment->status == 'rejected')
-                                                            <p>Status Pembayaran : <span
-                                                                    class="bg-danger rounded p-1 d-inline-block">
-                                                                    <i class="fa-solid fa-circle-exclamation"></i>
-                                                                    Rejected</span></p>
-                                                        @endif
-                                                    @endif
+                                                            class="bg-primary rounded p-1 d-inline-block">
+                                                            <i class="fa-regular fa-circle-check"></i> Completed
+                                                        </span>
+                                                    @elseif($bookList->status == 'cancelled')
+                                                    <p>Status Pembayaran : <span
+                                                            class="bg-danger rounded p-1 d-inline-block">
+                                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                                            Rejected</span></p>
                                                 @endif
                                             </div>
 
