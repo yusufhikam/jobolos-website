@@ -279,4 +279,5 @@ Route::middleware(['auth', 'role:customer'])->group(function () {
     Route::get('/jobolos/transactions/history-rental-booking', [TransactionController::class, 'show_rental']);
     // untuk upload bukti pembayaran
     Route::post('/jobolos/rental-transactions/payment/{id}', [PaymentRentalCameraController::class, 'uploadBukti'])->name('frontend.rental-transactions.payment');
+    Route::put('/jobolos/rental-transactions/cancel/{id}', [TransactionController::class, 'cancelRentalBooking']);
 });

@@ -139,4 +139,18 @@ class TransactionController extends Controller
 
         return view('frontend.history-rental-booking', compact('transaction', 'codeBooking'));
     }
+
+    // method untuk cancel rental booking
+    public function cancelRentalBooking($id)
+    {
+        $booking = Rental::findOrFail($id);
+
+        $booking->update([
+            'status' => 'cancelled',
+        ]);
+
+        Alert::success('Success!', 'Your Booking has been Canceled.');
+
+        return redirect('/jobolos/rental-transaction');
+    }
 }

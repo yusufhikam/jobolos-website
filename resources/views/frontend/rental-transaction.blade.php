@@ -115,6 +115,15 @@
                                                         it. </p>
                                                 @endif --}}
 
+                                                @if ($bookList->status == 'waiting' || $bookList->status == 'active')
+                                                    <div class="alert alert-success d-flex align-items-center"
+                                                        role="alert">
+                                                        <div>
+                                                            <h5>Mohon Cek Email Anda secara berkala, setelah dikonfirmasi
+                                                                INVOICE akan dikirim ke email Anda.</h5>
+                                                        </div>
+                                                    </div>
+                                                @endif
                                                 <div class="d-flex my-2">
                                                     <div class="m-2 col-lg-12">
                                                         <div class="col">
@@ -142,7 +151,8 @@
                                                                 <div class="col">
                                                                     <label class="fw-bold">Lens Type :
                                                                     </label>
-                                                                    <p>Focal Length <b>{{ $bookList->lenses->name }}</b>
+                                                                    <p>Focal Length
+                                                                        <b>{{ $bookList->lenses->name }}</b>
                                                                         (Lensa
                                                                         {{ $bookList->cameras->camera_types->name }})
                                                                     </p>
@@ -184,7 +194,8 @@
                                                             @if ($payments->status_pembayaran == 'pending' || $payments->status_pembayaran == 'rejected')
                                                                 <button type="button" class="btn btn-primary"
                                                                     data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                                    <i class="fa-solid fa-receipt"></i> View Your Receipt
+                                                                    <i class="fa-solid fa-receipt"></i> View Your
+                                                                    Receipt
                                                                 </button>
 
                                                                 <!-- Modal -->
@@ -295,8 +306,16 @@
                                                         </div>
                                                     @else
                                                         <div class="col-lg-3">
-                                                            <a href="" class="btn btn-danger d-block"
-                                                                style="font-size: 10pt;">Cancel</a>
+                                                            <form
+                                                                action="/jobolos/rental-transactions/cancel/{{ $bookList->id }}"
+                                                                method="POST">
+                                                                @csrf
+                                                                @method('PUT')
+
+                                                                <button type="submit"
+                                                                    class="btn btn-danger cancel-button"
+                                                                    style="font-size: 10pt;">Cancel</button>
+                                                            </form>
                                                         </div>
                                                     @endif
                                                 </div>
