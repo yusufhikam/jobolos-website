@@ -73,7 +73,10 @@ class RentalBookingConfirmationController extends Controller
             })
             ->when($statusFiltering, function ($query) use ($statusFiltering) {
                 $query->where('status_pembayaran', $statusFiltering);
-            })->paginate(6);
+            })
+            ->orderBy('updated_at', 'desc')
+            ->orderBy('created_at', 'asc')
+            ->paginate(6);
 
         $alert = null;
         if ($payments->isEmpty()) {

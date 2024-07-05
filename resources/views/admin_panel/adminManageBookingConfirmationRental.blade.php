@@ -251,9 +251,9 @@
                             </table>
                         @endif
                         {{-- PAGINATION --}}
-                        {{-- <div class="mt-2">
-                            {{ $cameras->withQueryString()->links() }}
-                        </div> --}}
+                        <div class="mt-2">
+                            {{ $payments->withQueryString()->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
