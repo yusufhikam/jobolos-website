@@ -116,7 +116,7 @@
                                                 @endif --}}
 
                                                 @if ($bookList->status == 'waiting' || $bookList->status == 'active')
-                                                    <div class="alert alert-primary d-flex align-items-center col-lg-8"
+                                                    <div class="alert alert-primary d-flex align-items-center justify-content-center"
                                                         role="alert">
                                                         <div>
                                                             <h5><i class="fa-solid fa-circle-check"
