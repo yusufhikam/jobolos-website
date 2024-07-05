@@ -63,7 +63,7 @@
                                                     <p>Status Pembayaran : <span
                                                             class="bg-danger rounded p-1 d-inline-block">
                                                             <i class="fa-solid fa-circle-exclamation"></i>
-                                                            Rejected</span></p>
+                                                            Canceled</span></p>
                                                 @endif
                                             </div>
 
