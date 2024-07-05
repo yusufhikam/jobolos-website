@@ -118,7 +118,7 @@
                                                         it. </p>
                                                 @endif --}}
 
-                                                @if ($bookList->status_pembayaran == 'completed' || $bookList->payments->status == 'approved')
+                                                @if ($bookList->status_pembayaran == 'completed')
                                                     <div class="alert alert-primary d-flex align-items-center justify-content-center mt-3"
                                                         role="alert">
                                                         <div>
