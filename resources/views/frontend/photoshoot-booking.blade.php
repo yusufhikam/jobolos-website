@@ -71,7 +71,8 @@
                                     <div class="col mb-3">
                                         <label for="location" class="form-label text-secondary">Detail Event
                                             Location</label>
-                                        <textarea name="location" id="location" cols="30" rows="10" class="form-control">{{ old('location') }}</textarea>
+                                        <textarea name="location" id="location" cols="30" rows="10" class="form-control"
+                                            placeholder="Describe your detail location">{{ old('location') }}</textarea>
                                         @if ($errors->has('location'))
                                             <p class="text-danger mt-1 error-input">{{ $errors->first('location') }}
                                             </p>
@@ -119,8 +120,8 @@
                                     @csrf
                                     <div class="col mb-3">
                                         <label for="tanggal" class="form-label text-secondary">Estimated Date</label>
-                                        <input class="form-control is-invalid" type="date" name="tanggal" id="tanggal"
-                                            disabled>
+                                        <input class="form-control is-invalid" type="date" name="tanggal"
+                                            id="tanggal" disabled>
                                     </div>
                                     <div class="col mb-3">
                                         <label for="packages" class="form-label text-secondary">Packages</label>
