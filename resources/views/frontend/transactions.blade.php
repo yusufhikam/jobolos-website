@@ -168,7 +168,7 @@
                                                                     <label class="fw-bold">Event Location :
                                                                     </label>
                                                                     <div
-                                                                        class="col mx-3 mb-3 bg-body-tertiary border rounded p-3">
+                                                                        class="col mx-3 mb-3 bg-body-tertiary border rounded">
                                                                         <div class="row">
                                                                             @if ($bookList->location_type == 'other')
                                                                                 <p>Location : Luar Kota</p>
@@ -189,7 +189,7 @@
                                                                     <label class="fw-bold">Concept :
                                                                     </label>
                                                                     <div
-                                                                        class="col mx-3 mb-3 bg-body-tertiary border rounded p-3">
+                                                                        class="col mx-3 mb-3 bg-body-tertiary border rounded">
 
                                                                         <p>{{ ucwords($bookList->concept) }}</p>
                                                                     </div>
