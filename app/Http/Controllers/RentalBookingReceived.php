@@ -59,7 +59,9 @@ class RentalBookingReceived extends Controller
             })
             ->when($statusFiltering, function ($query) use ($statusFiltering) {
                 $query->where('status', $statusFiltering);
-            })->paginate(6);
+            })
+            ->orderBy('updated_at', 'asc')
+            ->paginate(6);
 
         $alert = null;
         if ($rentals->isEmpty()) {
