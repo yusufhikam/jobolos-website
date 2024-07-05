@@ -132,30 +132,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <div class="col">
-                                                        <div class="row">
-                                                            <label class="fw-bold">Event Location :
-                                                            </label>
-                                                            <div class="col mx-3 mb-3 bg-body-tertiary border rounded p-3">
-                                                                <div class="row">
-                                                                    {{-- @if ($bookList->location_type == 'other')
-                                                                        <p>Location : Luar Kota</p>
-                                                                    @else
-                                                                        <p>Location :
-                                                                            {{ ucwords($bookList->location_type) }}
-                                                                        </p>
-                                                                    @endif --}}
-                                                                    <hr class="w-25 ms-2 float-start border-2">
-                                                                </div>
-                                                                <div class="row">
-                                                                    <p>Detail Location :</p>
-                                                                    {{-- <p>{{ ucwords($bookList->location) }}</p> --}}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                     <div class="col-lg-5 float-end  my-3 border border-2  rounded">
                                                         <div class="row">
                                                             <div class="col">
@@ -255,8 +231,7 @@
                                                                 method="POST" enctype="multipart/form-data">
                                                                 @csrf
                                                                 <div class="mb-3">
-                                                                    <label class="form-label"
-                                                                        for="inputGroupFile01">Upload
+                                                                    <label class="form-label" for="inputGroupFile01">Upload
                                                                         File</label>
                                                                     <input type="file" name="bukti_pembayaran"
                                                                         class="form-control" id="inputGroupFile01"
