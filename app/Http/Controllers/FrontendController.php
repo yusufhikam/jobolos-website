@@ -123,7 +123,9 @@ class FrontendController extends Controller
                         $q->where('status', $statusFiltering);
                     });
                 }
-            })->orderBy('name', 'asc')->paginate(20);
+            })
+            ->orderBy('name', 'asc')
+            ->paginate(20);
 
 
 
