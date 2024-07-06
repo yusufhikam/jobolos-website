@@ -28,38 +28,7 @@
                 <div class="row">
                     <h2>Halo, Selamat Datang <b>{{ ucwords(Auth::user()->name) }}</b>, Anda adalah
                         {{ ucwords(Auth::user()->nama_role->name) }}. </h2>
-                    <div class="col-lg-4 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3>{{ $newBooking }}</h3>
 
-                                <p>New Bookings Unpaid</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-bag"></i>
-                            </div>
-                            <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
-                                    class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-4 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-success">
-                            <div class="inner">
-                                {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
-                                <h3>{{ $paymentConfirm }}</h3>
-
-                                <p>Booking Payments Confirmation</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-solid fa-hand-holding-dollar"></i>
-                            </div>
-                            <a href="/admin_panel/adminManageBookingConfirmation" class="small-box-footer">More info <i
-                                    class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
                     <!-- ./col -->
                     <div class="col-lg-4 col-6">
                         <!-- small box -->
@@ -78,14 +47,14 @@
                     </div>
                     <div class="col-lg-4 col-6">
                         <!-- small box -->
-                        <div class="small-box bg-warning">
+                        <div class="small-box bg-success-subtle">
                             <div class="inner">
                                 <h3>Rp {{ number_format($pendapatanPhotoshoot, 0, ',', '.') }}</h3>
 
                                 <p>Pendapatan Photoshoot Bulan ini</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-person-add"></i>
+                                <i class="fa fa-solid fa-hand-holding-dollar"></i>
                             </div>
                             <a href="/admin_panel/adminManageUser" class="small-box-footer">More info <i
                                     class="fas fa-arrow-circle-right"></i></a>
@@ -93,20 +62,52 @@
                     </div>
                     <div class="col-lg-4 col-6">
                         <!-- small box -->
-                        <div class="small-box bg-warning">
+                        <div class="small-box bg-success">
                             <div class="inner">
                                 <h3>Rp {{ number_format($pendapatanRental, 0, ',', '.') }}</h3>
 
                                 <p>Pendapatan Rental Kamera Bulan ini</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-person-add"></i>
+                                <i class="fa fa-solid fa-hand-holding-dollar"></i>
                             </div>
                             <a href="/admin_panel/adminManageUser" class="small-box-footer">More info <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
 
+                    <div class="col-lg-6 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>{{ $newBooking }}</h3>
+
+                                <p>New Bookings Unpaid</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+                            <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-6 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
+                                <h3>{{ $paymentConfirm }}</h3>
+
+                                <p>Booking Payments Confirmation</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <a href="/admin_panel/adminManageBookingConfirmation" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
                     <div class="col-lg-6 col-6">
                         <!-- small box -->
                         <div class="small-box bg-success-subtle">
