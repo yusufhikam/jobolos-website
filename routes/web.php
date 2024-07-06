@@ -21,6 +21,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PaymentRentalCameraController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RekapBulananController;
 use App\Http\Controllers\RentalBookingConfirmationController;
 use App\Http\Controllers\RentalBookingReceived;
 use App\Http\Controllers\TransactionController;
@@ -118,6 +119,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin_panel/adminManageBookingConfirmation/Detail-Booking-Confirmed/{id}/{name}', [BookingConfirmationController::class, 'detail_confirmed'])->name('admin_panel.adminManageBookingConfirmation.detail');
     // download PDF detail confirmed payment booking
     Route::get('/admin_panel/download-pdf/{id}', [BookingConfirmationController::class, 'downloadPDF'])->name('admin_panel.downloadPDF');
+    // untuk rekap data bulanan photoshoot
+    Route::get('/admin_panel/Rekap-Photoshoot', [RekapBulananController::class, 'show'])->name('admin_panel.adminPhotoshootRekap');
 
 
 
@@ -176,7 +179,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin_panel/adminManageBookingConfirmation/Detail-Booking-Confirmed/{id}/{name}', [BookingConfirmationController::class, 'detail_confirmed'])->name('admin_panel.adminManageBookingConfirmation.detail');
     // download PDF detail confirmed payment booking
     Route::get('/admin_panel/download-pdf/{id}', [BookingConfirmationController::class, 'downloadPDF'])->name('admin_panel.downloadPDF');
-
+    // untuk rekap data bulanan photoshoot
+    Route::get('/admin_panel/Rekap-Rental', [RekapBulananController::class, 'show_rental'])->name('admin_panel.adminRentalRekap');
 
     // ADMIN MANAGE KONTENT
     Route::get('/admin_panel/adminManageContents', [BusinessPlanController::class, 'index'])->name('admin_panel.adminManageContents');

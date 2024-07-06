@@ -31,12 +31,14 @@ class AdminDashboardController extends Controller
     public function getBookings()
     {
         $today = date('Y-m-d');
-        $bookings = Booking::where('tanggal', '>=', $today)->select('tanggal')->get();
+        $bookings = Booking::where('tanggal', '>=', $today)
+            ->whereIn('status_pembayaran', ['pending', 'completed'])
+            ->select('tanggal')
+            ->get();
 
         $events = $bookings->map(function ($booking) {
             return [
-                'title' => 'BOOKED',
-                'start' => $booking->tanggal,
+                'title' => $booking->status == 'completed' ? 'COMPLETED' : 'BOOKED',                'start' => $booking->tanggal,
                 // 'end' => $booking->tanggal,
                 'allDay' => true,
             ];

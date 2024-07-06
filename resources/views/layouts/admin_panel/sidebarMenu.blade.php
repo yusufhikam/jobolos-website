@@ -27,7 +27,16 @@
 
             <li class="nav-item menu-open">
                 <a href="#"
-                    class="nav-link {{ Route::is(['admin_panel.adminManageContents']) ? 'active' : '' }}">
+                    class="nav-link {{ Route::is([
+                        'admin_panel.adminDashboard',
+                        'admin_panel.adminManageUser',
+                        'admin_panel.admin-add-user',
+                        'admin_panel.adminManageContents',
+                        'admin_panel.adminPhotoshootRekap',
+                        'admin_panel.adminRentalRekap',
+                    ])
+                        ? 'active'
+                        : '' }}">
                     <i class="nav-icon fas fa-laptop-file"></i>
                     <p>
                         Manajemen Bisnis
@@ -36,10 +45,38 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
+                        <a href="/admin_panel/adminDashboard"
+                            class="nav-link {{ Route::is('admin_panel.adminDashboard') ? 'active' : '' }}">
+                            <i class="fa-solid fa-home nav-icon"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin_panel/adminManageUser"
+                            class="nav-link {{ Route::is(['admin_panel.adminManageUser', 'admin_panel.admin-add-user']) ? 'active' : '' }}">
+                            <i class="fa-solid fa-users nav-icon"></i>
+                            <p>Manage Users</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="/admin_panel/adminManageContents"
                             class="nav-link {{ Route::is('admin_panel.adminManageContents') ? 'active' : '' }}">
                             <i class="fa fa-solid fa-pen-to-square nav-icon"></i>
                             <p>Manage Contents</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin_panel/Rekap-Photoshoot"
+                            class="nav-link {{ Route::is('admin_panel.adminPhotoshootRekap') ? 'active' : '' }}">
+                            <i class="fa fa-solid fa-pen-to-square nav-icon"></i>
+                            <p>Rekap Photoshoot</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin_panel/Rekap-Rental"
+                            class="nav-link {{ Route::is('admin_panel.adminRentalRekap') ? 'active' : '' }}">
+                            <i class="fa fa-solid fa-pen-to-square nav-icon"></i>
+                            <p>Rekap Rental Kamera</p>
                         </a>
                     </li>
                 </ul>
@@ -49,9 +86,6 @@
             <li class="nav-item menu-open">
                 <a href="#"
                     class="nav-link {{ Route::is([
-                        'admin_panel.adminDashboard',
-                        'admin_panel.adminManageUser',
-                        'admin_panel.admin-add-user',
                         'admin_panel.adminManageCategory',
                         'admin_panel.adminManageGallery',
                         'admin_panel.admin-add-photo',
@@ -69,20 +103,8 @@
                     </p>
                 </a>
                 <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="/admin_panel/adminDashboard"
-                            class="nav-link {{ Route::is('admin_panel.adminDashboard') ? 'active' : '' }}">
-                            <i class="fa-solid fa-home nav-icon"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/admin_panel/adminManageUser"
-                            class="nav-link {{ Route::is(['admin_panel.adminManageUser', 'admin_panel.admin-add-user']) ? 'active' : '' }}">
-                            <i class="fa-solid fa-users nav-icon"></i>
-                            <p>Users</p>
-                        </a>
-                    </li>
+
+
                     <li class="nav-item">
                         <a href="/admin_panel/adminManageCategory"
                             class="nav-link {{ Route::is(['admin_panel.adminManageCategory', 'admin_panel.admin-add-category']) ? 'active' : '' }}">

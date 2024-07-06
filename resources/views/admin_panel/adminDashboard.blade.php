@@ -56,7 +56,7 @@
                             <div class="icon">
                                 <i class="fa fa-solid fa-hand-holding-dollar"></i>
                             </div>
-                            <a href="/admin_panel/adminManageUser" class="small-box-footer">More info <i
+                            <a href="/admin_panel/Rekap-Photoshoot" class="small-box-footer text-dark">Rekap Data Bulanan <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                             <div class="icon">
                                 <i class="fa fa-solid fa-hand-holding-dollar"></i>
                             </div>
-                            <a href="/admin_panel/adminManageUser" class="small-box-footer">More info <i
+                            <a href="/admin_panel/adminManageUser" class="small-box-footer">Rekap Data Bulanan <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
