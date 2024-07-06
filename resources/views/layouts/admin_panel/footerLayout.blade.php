@@ -3,7 +3,7 @@
                 style="color: #ff007b;"></i> Jobolos
             Photography</a>.</strong>
 
-    <div class="float-right d-none d-sm-inline-block">
+    {{-- <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> 3.2.0
-    </div>
+    </div> --}}
 </footer>
