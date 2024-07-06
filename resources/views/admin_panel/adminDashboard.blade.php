@@ -27,7 +27,7 @@
                 <!-- Small boxes (Stat box) -->
                 <h2>Halo, Selamat Datang <b>{{ ucwords(Auth::user()->name) }}</b>, Anda adalah
                     {{ ucwords(Auth::user()->nama_role->name) }}. </h2>
-                <div class="row mt-3 p-3 border border-2 my-3 rounded bg-secondary">
+                <div class="row mt-3 p-3 border border-2 my-3 rounded">
 
                     <!-- ./col -->
                     <div class="col-lg-4 col-12">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-lg-4 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-success-subtle">
+                        <div class="small-box bg-success-subtle text-dark">
                             <div class="inner">
                                 <h3>Rp {{ number_format($pendapatanPhotoshoot, 0, ',', '.') }}</h3>
 
@@ -94,7 +94,7 @@
                     <!-- ./col -->
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-info-subtle">
+                        <div class="small-box bg-info-subtle text-dark">
                             <div class="inner">
                                 {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
                                 <h3>{{ $paymentConfirm }}</h3>
@@ -125,7 +125,7 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-success-subtle">
+                        <div class="small-box bg-success-subtle text-dark">
                             <div class="inner">
                                 {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
                                 <h3>{{ $paymentRentalConfirm }}</h3>
