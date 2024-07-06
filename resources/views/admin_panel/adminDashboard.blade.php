@@ -82,7 +82,7 @@
                             <div class="inner">
                                 <h3>{{ $newBooking }}</h3>
 
-                                <p>New Bookings Unpaid</p>
+                                <p>New Photoshoot Bookings Unpaid</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-bag"></i>
@@ -94,12 +94,12 @@
                     <!-- ./col -->
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-success">
+                        <div class="small-box bg-info-subtle">
                             <div class="inner">
                                 {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
                                 <h3>{{ $paymentConfirm }}</h3>
 
-                                <p>Booking Payments Confirmation</p>
+                                <p>Photoshoot Booking Payments Confirmation</p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-solid fa-hand-holding-dollar"></i>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-info-subtle">
+                        <div class="small-box bg-success-subtle">
                             <div class="inner">
                                 <h3>{{ $newRentalBooking }}</h3>
 
@@ -125,7 +125,7 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-success-subtle">
+                        <div class="small-box bg-success">
                             <div class="inner">
                                 {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
                                 <h3>{{ $paymentRentalConfirm }}</h3>
