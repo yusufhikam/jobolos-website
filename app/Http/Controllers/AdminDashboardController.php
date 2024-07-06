@@ -20,7 +20,7 @@ class AdminDashboardController extends Controller
         $newRentalBooking = Rental::where('status', 'pending')->count();
 
         $pendapatanPhotoshoot = Booking::count('total_harga');
-        $pendpaatanRental = Rental::count('total_harga');
+        $pendpatanRental = Rental::count('total_harga');
 
 
         return view('/admin_panel/adminDashboard', compact('newBooking', 'userRegistered', 'paymentConfirm', 'paymentRentalConfirm', 'newRentalBooking', 'pendpatanPhotoshoot', 'pendapatanRental'));

@@ -80,7 +80,7 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>{{ $userRegistered }}</h3>
+                                <h3>{{ $pendapatanPhotoshoot }}</h3>
 
                                 <p>Pendapatan Photoshoot</p>
                             </div>
@@ -95,7 +95,7 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>{{ $userRegistered }}</h3>
+                                <h3>{{ $pendapatanRental }}</h3>
 
                                 <p>Pendapatan Rental Kamera</p>
                             </div>
