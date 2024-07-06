@@ -110,7 +110,7 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-info">
+                        <div class="small-box bg-info-subtle">
                             <div class="inner">
                                 <h3>{{ $newRentalBooking }}</h3>
 
