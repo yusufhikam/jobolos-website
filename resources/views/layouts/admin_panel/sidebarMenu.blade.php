@@ -96,7 +96,7 @@
                     ])
                         ? 'active'
                         : '' }}">
-                    <i class="nav-icon fas fa-book"></i>
+                    <i class="nav-icon fa-solid fa-camera-rotate"></i>
                     <p>
                         Pemotretan
                         <i class="right fas fa-angle-left"></i>
