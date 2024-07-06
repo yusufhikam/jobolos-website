@@ -27,7 +27,7 @@
                 <!-- Small boxes (Stat box) -->
                 <h2>Halo, Selamat Datang <b>{{ ucwords(Auth::user()->name) }}</b>, Anda adalah
                     {{ ucwords(Auth::user()->nama_role->name) }}. </h2>
-                <div class="row mt-3">
+                <div class="row mt-3 p-3 border border-2">
 
                     <!-- ./col -->
                     <div class="col-lg-4 col-12">
