@@ -25,9 +25,9 @@
         <section class="content">
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
-                <div class="row">
-                    <h2>Halo, Selamat Datang <b>{{ ucwords(Auth::user()->name) }}</b>, Anda adalah
-                        {{ ucwords(Auth::user()->nama_role->name) }}. </h2>
+                <h2>Halo, Selamat Datang <b>{{ ucwords(Auth::user()->name) }}</b>, Anda adalah
+                    {{ ucwords(Auth::user()->nama_role->name) }}. </h2>
+                <div class="row mt-3">
 
                     <!-- ./col -->
                     <div class="col-lg-4 col-12">
