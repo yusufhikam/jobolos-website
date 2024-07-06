@@ -110,6 +110,21 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>{{ $newRentalBooking }}</h3>
+
+                                <p>New Rental Camera Bookings Unpaid</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+                            <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <!-- small box -->
                         <div class="small-box bg-success-subtle">
                             <div class="inner">
                                 {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
@@ -125,21 +140,7 @@
                                 <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-12">
-                        <!-- small box -->
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3>{{ $newRentalBooking }}</h3>
 
-                                <p>New Rental Camera Bookings Unpaid</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-bag"></i>
-                            </div>
-                            <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
-                                    class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="container">
