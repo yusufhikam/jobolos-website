@@ -110,7 +110,7 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-success-subtle">
+                        <div class="small-box bg-success">
                             <div class="inner">
                                 <h3>{{ $newRentalBooking }}</h3>
 
@@ -125,7 +125,7 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
-                        <div class="small-box bg-success">
+                        <div class="small-box bg-success-subtle">
                             <div class="inner">
                                 {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
                                 <h3>{{ $paymentRentalConfirm }}</h3>
