@@ -23,7 +23,7 @@ class AdminDashboardController extends Controller
         $pendpatanRental = Rental::count('total_harga');
 
 
-        return view('/admin_panel/adminDashboard', compact('newBooking', 'userRegistered', 'paymentConfirm', 'paymentRentalConfirm', 'newRentalBooking', 'pendpatanPhotoshoot', 'pendapatanRental'));
+        return view('/admin_panel/adminDashboard', compact('newBooking', 'userRegistered', 'paymentConfirm', 'paymentRentalConfirm', 'newRentalBooking', 'pendapatanPhotoshoot', 'pendapatanRental'));
     }
 
     // METHOD UNTUK MENANDAI CALENDAR JIKA ADA PHOTOSHOOT BOOKING
