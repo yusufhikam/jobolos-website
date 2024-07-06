@@ -49,7 +49,7 @@
                         <!-- small box -->
                         <div class="small-box bg-success-subtle">
                             <div class="inner">
-                                <h5>Rp {{ number_format($pendapatanPhotoshoot, 0, ',', '.') }}</h5>
+                                <h4>Rp {{ number_format($pendapatanPhotoshoot, 0, ',', '.') }}</h4>
 
                                 <p>Pendapatan Photoshoot Bulan ini</p>
                             </div>
@@ -64,7 +64,7 @@
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h5>Rp {{ number_format($pendapatanRental, 0, ',', '.') }}</h5>
+                                <h4>Rp {{ number_format($pendapatanRental, 0, ',', '.') }}</h4>
 
                                 <p>Pendapatan Rental Kamera Bulan ini</p>
                             </div>
