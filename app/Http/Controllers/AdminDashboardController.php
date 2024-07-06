@@ -19,8 +19,11 @@ class AdminDashboardController extends Controller
         $paymentRentalConfirm = RentalPayment::where('status_pembayaran', 'pending')->count();
         $newRentalBooking = Rental::where('status', 'pending')->count();
 
+        $pendapatanPhotoshoot = Payment::count('total_harga');
+        $pendpaatanRental = RentalPayment::count('total_harga');
 
-        return view('/admin_panel/adminDashboard', compact('newBooking', 'userRegistered', 'paymentConfirm', 'paymentRentalConfirm', 'newRentalBooking'));
+
+        return view('/admin_panel/adminDashboard', compact('newBooking', 'userRegistered', 'paymentConfirm', 'paymentRentalConfirm', 'newRentalBooking', 'pendpatanPhotoshoot', 'pendapatanRental'));
     }
 
     // METHOD UNTUK MENANDAI CALENDAR JIKA ADA PHOTOSHOOT BOOKING
