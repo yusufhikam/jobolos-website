@@ -257,6 +257,13 @@
                     </tr>
                 </table>
 
+                @if ($booking->bookings->payment_type == 'dp')
+                    <div class="text-center" style="margin-top: 20px; color: red;">
+                        <p>Pelunasan Pembayaran Photoshoot maksimal h+7 setelah acara. Seluruh File foto dapat
+                            diakses setelah pembayaran Lunas.</p>
+                    </div>
+                @endif
+
                 <div class="row-details">
                     <div class="col-6 col-details">
                         <div class="card-body">
