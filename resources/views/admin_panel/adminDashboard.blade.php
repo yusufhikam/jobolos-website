@@ -30,7 +30,7 @@
                         {{ ucwords(Auth::user()->nama_role->name) }}. </h2>
 
                     <!-- ./col -->
-                    <div class="col-lg-4 col-6">
+                    <div class="col-lg-4 col-12">
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
@@ -45,11 +45,11 @@
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-6">
+                    <div class="col-lg-4 col-12">
                         <!-- small box -->
                         <div class="small-box bg-success-subtle">
                             <div class="inner">
-                                <h4>Rp {{ number_format($pendapatanPhotoshoot, 0, ',', '.') }}</h4>
+                                <h3>Rp {{ number_format($pendapatanPhotoshoot, 0, ',', '.') }}</h3>
 
                                 <p>Pendapatan Photoshoot Bulan ini</p>
                             </div>
@@ -60,11 +60,11 @@
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-6">
+                    <div class="col-lg-4 col-12">
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h4>Rp {{ number_format($pendapatanRental, 0, ',', '.') }}</h4>
+                                <h3>Rp {{ number_format($pendapatanRental, 0, ',', '.') }}</h3>
 
                                 <p>Pendapatan Rental Kamera Bulan ini</p>
                             </div>
@@ -76,70 +76,68 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-6 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-info">
-                                <div class="inner">
-                                    <h3>{{ $newBooking }}</h3>
+                    <div class="col-lg-6 col-12">
+                        <!-- small box -->
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>{{ $newBooking }}</h3>
 
-                                    <p>New Bookings Unpaid</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-bag"></i>
-                                </div>
-                                <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                <p>New Bookings Unpaid</p>
                             </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+                            <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
-                                    <h3>{{ $paymentConfirm }}</h3>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-6 col-12">
+                        <!-- small box -->
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
+                                <h3>{{ $paymentConfirm }}</h3>
 
-                                    <p>Booking Payments Confirmation</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-solid fa-hand-holding-dollar"></i>
-                                </div>
-                                <a href="/admin_panel/adminManageBookingConfirmation" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                <p>Booking Payments Confirmation</p>
                             </div>
+                            <div class="icon">
+                                <i class="fa fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <a href="/admin_panel/adminManageBookingConfirmation" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-lg-6 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success-subtle">
-                                <div class="inner">
-                                    {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
-                                    <h3>{{ $paymentRentalConfirm }}</h3>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <!-- small box -->
+                        <div class="small-box bg-success-subtle">
+                            <div class="inner">
+                                {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
+                                <h3>{{ $paymentRentalConfirm }}</h3>
 
-                                    <p>Rental Camera Payments Confirmation</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-solid fa-hand-holding-dollar"></i>
-                                </div>
-                                <a href="/admin_panel/adminManageBookingConfirmationRental"
-                                    class="small-box-footer text-success">More info
-                                    <i class="fas fa-arrow-circle-right"></i></a>
+                                <p>Rental Camera Payments Confirmation</p>
                             </div>
+                            <div class="icon">
+                                <i class="fa fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <a href="/admin_panel/adminManageBookingConfirmationRental"
+                                class="small-box-footer text-success">More info
+                                <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-lg-6 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-info">
-                                <div class="inner">
-                                    <h3>{{ $newRentalBooking }}</h3>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <!-- small box -->
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>{{ $newRentalBooking }}</h3>
 
-                                    <p>New Rental Camera Bookings Unpaid</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-bag"></i>
-                                </div>
-                                <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                <p>New Rental Camera Bookings Unpaid</p>
                             </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+                            <a href="/admin_panel/adminManageBookingReceived" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
