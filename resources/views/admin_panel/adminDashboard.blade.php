@@ -80,9 +80,9 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>{{ $pendapatanPhotoshoot }}</h3>
+                                <h3>Rp {{ number_format($pendapatanPhotoshoot, 0, ',', '.') }}</h3>
 
-                                <p>Pendapatan Photoshoot</p>
+                                <p>Pendapatan Photoshoot Bulan ini</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>
@@ -95,9 +95,9 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>{{ $pendapatanRental }}</h3>
+                                <h3>Rp {{ number_format($pendapatanRental, 0, ',', '.') }}</h3>
 
-                                <p>Pendapatan Rental Kamera</p>
+                                <p>Pendapatan Rental Kamera Bulan ini</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>

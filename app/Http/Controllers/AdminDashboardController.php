@@ -19,8 +19,9 @@ class AdminDashboardController extends Controller
         $paymentRentalConfirm = RentalPayment::where('status_pembayaran', 'pending')->count();
         $newRentalBooking = Rental::where('status', 'pending')->count();
 
-        $pendapatanPhotoshoot = Booking::sum('total_harga');
-        $pendapatanRental = Rental::sum('total_harga');
+        // untuk menampilkan pendapatan perbulan
+        $pendapatanPhotoshoot = Booking::whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))->sum('total_harga');
+        $pendapatanRental = Rental::whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))->sum('total_harga');
 
 
         return view('/admin_panel/adminDashboard', compact('newBooking', 'userRegistered', 'paymentConfirm', 'paymentRentalConfirm', 'newRentalBooking', 'pendapatanPhotoshoot', 'pendapatanRental'));
