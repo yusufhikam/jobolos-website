@@ -68,14 +68,14 @@
                     <li class="nav-item">
                         <a href="/admin_panel/Rekap-Photoshoot"
                             class="nav-link {{ Route::is('admin_panel.adminPhotoshootRekap') ? 'active' : '' }}">
-                            <i class="fa-solid fa-book"></i>
+                            <i class="fa-solid fa-book nav-icon"></i>
                             <p>Rekap Photoshoot</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/admin_panel/Rekap-Rental"
                             class="nav-link {{ Route::is('admin_panel.adminRentalRekap') ? 'active' : '' }}">
-                            <i class="fa-solid fa-book"></i>
+                            <i class="fa-solid fa-book nav-icon"></i>
                             <p>Rekap Rental Kamera</p>
                         </a>
                     </li>
