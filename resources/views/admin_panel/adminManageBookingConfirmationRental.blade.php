@@ -227,7 +227,7 @@
                                                         @if ($payment->status_pembayaran == 'approved')
                                                             <div class="col d-grid">
                                                                 <form
-                                                                    action="/admin_panel/adminManageBookingConfirmationRental/completed/{{ $payment->id }}"
+                                                                    action="{{ route('admin_panel.adminManageBookingConfirmationRental.completed', $payment->id) }}"
                                                                     method="POST">
                                                                     @csrf
                                                                     @method('PUT')
