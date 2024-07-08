@@ -154,11 +154,12 @@ class RentalBookingConfirmationController extends Controller
     public function completed($id)
     {
 
-        $statusRental = Rental::findOrFail($id);
+        // Mendapatkan data RentalPayment berdasarkan id
+        $rentalPayment = RentalPayment::findOrFail($id);
 
-        $statusRental->update([
-            'status' => 'completed',
-        ]);
+        // Mengambil rental_id dari rentalPayment dan kemudian memperbarui status Rental
+        $rental = Rental::findOrFail($rentalPayment->rental_id);
+        $rental->update(['status' => 'completed']);
 
         Alert::success('Penyewaan Selesai!', 'Status Ketersediaan Kamera telah diperbarui');
 
