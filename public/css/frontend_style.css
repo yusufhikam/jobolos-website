@@ -52,7 +52,6 @@ body {
     left: 0;
     width: 100%;
     padding: 0.5rem 10%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -170,7 +169,8 @@ body {
 .navbars a {
     position: relative;
     display: inline-block;
-    font-size: 0.8rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
     color: #1b1b1b;
     text-decoration: none;
     font-weight: 500;

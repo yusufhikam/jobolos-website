@@ -167,7 +167,7 @@
                     </ul>
                 </div>
             @else
-                <a href="/login" style="--i:6;" class="btn btn-success">LOGIN</a>
+                <a href="/login" style="--i:6;" class="btn btn-success text-light">Login</a>
             @endauth
 
 
