@@ -149,31 +149,28 @@
                         </span></a> --}}
                 </div>
             @endauth
-            <div class="dropdowns">
-                <a href="#" style="--i:6;" class="btn btn-login">
-                    @auth
+
+            @auth
+                <div class="dropdowns">
+                    <a href="#" style="--i:6;" class="btn btn-login">
                         @if (Auth::user()->image != null)
-                            <img class="img-circle "
+                            <img class="img-circle"
                                 src="{{ asset('storage/admin_assets/images_users/' . Auth::user()->image) }}"
                                 alt="foto_user" width="25px" height="25px">
                         @else
-                            <img src="{{ asset('storage/users/images/pp.png') }}" alt="foto_user" class="img-rounded "
+                            <img src="{{ asset('storage/users/images/pp.png') }}" alt="foto_user" class="img-rounded"
                                 width="25px" height="25px">
                         @endif
-                    @else
-                        <i class="fa fa-solid fa-user"></i>
-                    @endauth
-                </a>
-                <ul class="dropdown-contents">
-                    @auth
-                        <li><a href="/logout" class="btn-login text-center ">Logout</a>
-                        </li>
-                    @else
-                        <li><a href="/login" class="btn-login text-center ">Login</a>
-                        </li>
-                    @endauth
-                </ul>
-            </div>
+                    </a>
+                    <ul class="dropdown-contents">
+                        <li><a href="/logout" class="btn-login text-center">Logout</a></li>
+                    </ul>
+                </div>
+            @else
+                <a href="/login" style="--i:6;" class="btn btn-success">LOGIN</a>
+            @endauth
+
+
         </nav>
     </header>
 
