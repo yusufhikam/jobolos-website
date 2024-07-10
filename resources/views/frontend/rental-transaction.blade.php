@@ -84,19 +84,7 @@
                                                                 class="bg-warning rounded p-1 d-inline-block"><i
                                                                     class="fa-solid fa-hand-holding-dollar"></i> Waiting for
                                                                 payment...</span></p>
-                                                        {{-- @foreach ($bookList->rentalPayments as $payments) --}}
                                                     @elseif ($bookList->status == 'waiting')
-                                                        <p>Status Pembayaran : <span class=" rounded p-1 d-inline-block"
-                                                                style="background-color: #00a5cf; color:aliceblue;"><i
-                                                                    class="fa fa-regular fa-clock"></i> Waiting for
-                                                                Confirmation</span></p>
-                                                    @elseif($bookList->status == 'active')
-                                                        <p>Status Pembayaran : <span
-                                                                class="bg-primary rounded p-1 d-inline-block">
-                                                                <i class="fa-regular fa-circle-check"></i>
-                                                                ACTIVE RENT</span>
-                                                        </p>
-                                                    @else
                                                         @php
                                                             $rejectedPayment = $bookList->rentalPayments->firstWhere(
                                                                 'status_pembayaran',
@@ -106,11 +94,25 @@
 
                                                         @if ($rejectedPayment)
                                                             <p>Status Pembayaran : <span
-                                                                    class="bg-danger rounded p-1 d-inline-block">
-                                                                    <i class="fa-solid fa-circle-exclamation"></i>
-                                                                    Rejected</span>
-                                                            </p>
+                                                                    class="bg-danger rounded p-1 d-inline-block"><i
+                                                                        class="fa-solid fa-circle-exclamation"></i>
+                                                                    Rejected.</span></p>
+                                                        @else
+                                                            <p>Status Pembayaran : <span class="rounded p-1 d-inline-block"
+                                                                    style="background-color: #00a5cf; color:aliceblue;"><i
+                                                                        class="fa fa-regular fa-clock"></i> Waiting for
+                                                                    Confirmation</span></p>
                                                         @endif
+                                                    @elseif($bookList->status == 'active')
+                                                        <p>Status Pembayaran : <span
+                                                                class="bg-primary rounded p-1 d-inline-block">
+                                                                <i class="fa-regular fa-circle-check"></i> ACTIVE
+                                                                RENT</span></p>
+                                                    @elseif($bookList->status == 'completed')
+                                                        <p>Status Pembayaran : <span
+                                                                class="bg-success rounded p-1 d-inline-block">
+                                                                <i class="fa-solid fa-check-circle"></i> Completed</span>
+                                                        </p>
                                                     @endif
                                                 </div>
 
@@ -134,6 +136,15 @@
                                                 @endif
                                                 <div class="d-flex my-2">
                                                     <div class="m-2 col-lg-12">
+                                                        @foreach ($bookList->rentalPayments as $ket)
+                                                            @if ($ket->status_pembayaran == 'rejected')
+                                                                <div class="text-center bg-danger-subtle mb-2 p-2">
+                                                                    <h5 class="text-danger">We're Sorry,</h5>
+                                                                    <p class="text-danger">Your Payment Proof is Not Valid.
+                                                                        Please Reupload your payment proof.</p>
+                                                                </div>
+                                                            @endif
+                                                        @endforeach
                                                         <div class="col">
                                                             <div class="row">
                                                                 <div class="col">
