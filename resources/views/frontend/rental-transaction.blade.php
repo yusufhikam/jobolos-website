@@ -296,7 +296,7 @@
                                                         @endphp
 
                                                         {{-- @foreach ($bookList->payments as $payments) --}}
-                                                        @if ($bookList->rentalPayments->isNotEmpty() && $bookList->rentalPayments->first()->status == 'rejected')
+                                                        @if ($bookList->rentalPayments->isNotEmpty() && $bookList->rentalPayments->first()->status_pembayaran == 'rejected')
                                                             <a type="button" class="btn btn-primary d-block"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#staticBackdrop{{ $bookList->id }}"
