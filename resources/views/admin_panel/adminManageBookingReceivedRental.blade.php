@@ -155,6 +155,11 @@
                                                         style="font-size: 10pt; margin:0;">
                                                         Kamera Sedang Disewa
                                                     </p>
+                                                @elseif($rental->status == 'cancelled')
+                                                    <p class="bg-danger rounded p-2 text-center"
+                                                        style="font-size: 10pt; margin:0;">
+                                                        Pesanan Dibatalkan
+                                                    </p>
                                                 @else
                                                     <p class="bg-info rounded p-2 text-center"
                                                         style="font-size: 10pt; margin:0;">
