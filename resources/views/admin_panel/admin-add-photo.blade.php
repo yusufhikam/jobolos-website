@@ -64,7 +64,7 @@
                                         @csrf
                                         <div class="col-auto">
                                             <div class="mb-3">
-                                                <label class="form-label" for="photo">Upload Foto</label>
+                                                <label class="form-label" for="photo">Upload Foto (Banyak Foto)</label>
                                                 <input type="file" class="form-control" name="name[]" id="photo"
                                                     multiple required>
                                             </div>
