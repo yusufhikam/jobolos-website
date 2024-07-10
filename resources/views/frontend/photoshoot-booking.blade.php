@@ -257,7 +257,7 @@
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text: 'Tanggal ini sudah dipesan. Silakan pilih tanggal lain.'
+                        text: 'This date is already booked. Please choose another date.'
                     });
                     dateInput.value = ''; // Reset date input
                 }
