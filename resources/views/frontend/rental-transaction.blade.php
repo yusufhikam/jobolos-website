@@ -362,7 +362,7 @@
                                                                     method="POST" enctype="multipart/form-data">
                                                                     @csrf
                                                                     @foreach ($bookList->rentalPayments as $payments)
-                                                                        @if ($payments->status == 'rejected')
+                                                                        @if ($payments->status_pembayaran == 'rejected')
                                                                             @method('PUT')
                                                                         @endif
                                                                     @endforeach
