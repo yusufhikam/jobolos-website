@@ -137,7 +137,7 @@ class BusinessPlanController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'bank_name' => 'required|max:255', // adjust the max size as per your needs
-            'no_rek' => 'required|numeric|digits_between:1,20',
+            'no_rek' => 'required|numeric|max:20',
             // Add other validation rules as per your requirements
         ]);
 
