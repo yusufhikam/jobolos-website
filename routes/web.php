@@ -195,7 +195,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     // untuk tambah data bank untuk transfer
     Route::post('/admin_panel/adminManageContents/store_akunBank', [BusinessPlanController::class, 'store_akunBank'])->name('admin_panel.adminManageContents.Bank');
     // untuk edit data bank untuk transfer
-    Route::put('/admin_panel/adminManageContents/edit/bank-{id}', [BusinessPlanController::class, 'update_akunBank']);
+    Route::put('/admin_panel/adminManageContents/edit/bank/{id}', [BusinessPlanController::class, 'update_akunBank']);
     // untuk delete data bank
     Route::delete('/admin_panel/adminManageContents/delete/bank-{id}', [BusinessPlanController::class, 'destroy_akunBank']);
 

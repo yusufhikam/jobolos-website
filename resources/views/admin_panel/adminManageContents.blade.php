@@ -311,7 +311,8 @@
                                                         <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="modalAboutUsLabel">Crew
+                                                                    <h5 class="modal-title" id="modalAboutUsLabel">Bank
+                                                                        Account
                                                                         Details
                                                                     </h5>
                                                                     <button type="button" class="btn-close"
@@ -320,7 +321,7 @@
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <form
-                                                                        action="/admin_panel/adminManageContents/edit/bank-{{ $crew->id }}"
+                                                                        action="/admin_panel/adminManageContents/edit/bank/{{ $crew->id }}"
                                                                         method="POST">
                                                                         @csrf
                                                                         @method('PUT')
