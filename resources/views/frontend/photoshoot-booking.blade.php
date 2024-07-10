@@ -254,8 +254,12 @@
             dateInput.addEventListener('input', function() {
                 var selectedDate = dateInput.value;
                 if (isDateBooked(selectedDate)) {
-                    alert('This date is already booked. Please choose another date.');
-                    dateInput.value = '';
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Tanggal ini sudah dipesan. Silakan pilih tanggal lain.'
+                    });
+                    dateInput.value = ''; // Reset date input
                 }
             });
         });
