@@ -134,7 +134,7 @@
                 </div>
 
                 {{-- Modal tambah tipe kamera --}}
-                <div class="modal fade" id="tambahModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                {{-- <div class="modal fade" id="tambahModal" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 {{-- TABLE CAMERA LIST --}}
 

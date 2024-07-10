@@ -130,15 +130,15 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     // untuk menampilkan data kamera
     Route::get('/admin_panel/adminManageCamera', [CameraController::class, 'index'])->name('admin_panel.adminManageCamera');
     // untuk menambahkan data kamera
-    Route::post('/admin_panel/adminManageCamera', [CameraController::class, 'store_cameras'])->name('admin_panel.adminManageCamera');
+    Route::post('/admin_panel/adminManageCamera', [CameraController::class, 'store_cameras']);
     // untuk menghapus data kamera
     Route::delete('/admin_panel/adminManageCamera/destroy-camera{id}', [CameraController::class, 'destroy_cameras'])->name('admin_panel.adminManageCamera.delete');
     // untuk edit data kamera
     Route::put('/admin_panel/adminManageCamera/Edit-Camera-{id}', [CameraController::class, 'update_cameras']);
     // untuk menampilkan data tipe kamera
-    Route::get('/admin_panel/adminManageCameraType', [CameraTypeController::class, 'camera_types'])->name('admin_panel.adminManageCamera');
+    Route::get('/admin_panel/adminManageCameraType', [CameraTypeController::class, 'camera_types']);
     // untuk menambahkan data camera types
-    Route::post('/admin_panel/adminManageCameraType/Add-Camera-Types', [CameraTypeController::class, 'store_camera_types'])->name('admin_panel.adminManageCamera');
+    Route::post('/admin_panel/adminManageCameraType/Add-Camera-Types', [CameraTypeController::class, 'store_camera_types']);
     // untuk hapus data camera types
     Route::delete('/admin_panel/adminManageCameraType/destroy-camera-type{id}', [CameraTypeController::class, 'destroy_camera_types']);
     // untuk mengedit data camera types
