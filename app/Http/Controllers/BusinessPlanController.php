@@ -130,6 +130,27 @@ class BusinessPlanController extends Controller
         return redirect('/admin_panel/adminManageContents');
     }
 
+    // METHOD UNTUK EDIT DATA BANK
+    public function update_akunBank(Request $request, $id)
+    {
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'bank_name' => 'required|max:255', // adjust the max size as per your needs
+            'no_rek' => 'required|max:20',
+            // Add other validation rules as per your requirements
+        ]);
+
+        $akunBank = BankAccount::findOrFail($id);
+        $akunBank->update($request->all());
+
+        Alert::success('Berhasil !', 'Data Akun Bank telah diupdate');
+
+        return redirect('/admin_panel/adminManageContents');
+    }
+
+
+
     // METHOD UNTUK DELETE DATA AKUN BANK
     public function destroy_akunBank($id)
     {
