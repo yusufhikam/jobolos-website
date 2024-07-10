@@ -136,7 +136,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     // untuk edit data kamera
     Route::put('/admin_panel/adminManageCamera/Edit-Camera-{id}', [CameraController::class, 'update_cameras']);
     // untuk menampilkan data tipe kamera
-    Route::get('/admin_panel/adminManageCameraType', [CameraTypeController::class, 'camera_types']);
+    Route::get('/admin_panel/adminManageCameraType', [CameraTypeController::class, 'camera_types'])->name('admin_panel.adminManageCamera.CameraType');
     // untuk menambahkan data camera types
     Route::post('/admin_panel/adminManageCameraType/Add-Camera-Types', [CameraTypeController::class, 'store_camera_types']);
     // untuk hapus data camera types

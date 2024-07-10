@@ -161,6 +161,7 @@
                 <a href="#"
                     class="nav-link {{ Route::is([
                         'admin_panel.adminManageCamera',
+                        'admin_panel.adminManageCamera.CameraType',
                         'admin_panel.adminManageBrands',
                         'admin_panel.adminManageLens',
                         'admin_panel.adminManageBookingReceivedRental',
