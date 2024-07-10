@@ -87,6 +87,6 @@ class PaymentRentalCameraController extends Controller
         }
 
         Alert::success('Berhasil!', 'Bukti Pembayaran Anda telah di Update, silahkan tunggu konfirmasi admin untuk mendapatkan INVOICE !');
-        return redirect('/jobolos/transactions');
+        return redirect('/jobolos/rental-transactions');
     }
 }
