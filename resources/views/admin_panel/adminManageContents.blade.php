@@ -321,7 +321,7 @@
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <form
-                                                                        action="/admin_panel/adminManageContents/edit/bank/{{ $crew->id }}"
+                                                                        action="/admin_panel/adminManageContents/edit/bank/{{ $bank->id }}"
                                                                         method="POST">
                                                                         @csrf
                                                                         @method('PUT')
