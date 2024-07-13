@@ -145,6 +145,16 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <label class="fw-bold">Concept :
+                                                            </label>
+                                                            <div class="col mx-3 mb-3 bg-body-tertiary border rounded p-3">
+
+                                                                <p>{{ ucwords($bookList->concept) }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
                                                     <div class="col-lg-5 float-end  my-3 border border-2  rounded">
                                                         <div class="row">
