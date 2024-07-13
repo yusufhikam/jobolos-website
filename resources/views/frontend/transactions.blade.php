@@ -123,9 +123,9 @@
                                                         role="alert">
                                                         <div>
                                                             <h5><i class="fa-solid fa-circle-check"
-                                                                    style="color: #008009;"></i> Mohon Cek Email Anda secara
-                                                                berkala, setelah dikonfirmasi
-                                                                INVOICE akan dikirim ke email Anda.</h5>
+                                                                    style="color: #008009;"></i> Please check your email.
+                                                                Once confirmed by admin INVOICE will be sent to your email.
+                                                            </h5>
                                                         </div>
                                                     </div>
                                                 @endif
