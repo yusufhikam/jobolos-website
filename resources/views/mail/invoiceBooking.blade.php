@@ -28,6 +28,14 @@
     @if ($booking->bookings->location_type == 'other')
         <p>Biaya Tambahan untuk Luar Kota: Rp 250.000</p>
     @endif
+
+    @if ($booking->bookings->payment_type == 'dp')
+        <p>Total Pelunasan : Rp {{ number_format($booking->bookings->sisa_harga, 0, ',', '.') }}</p>
+
+        <p>Anda dapat mengakses Foto ketika sudah melakukan Pelunasan. Pelunasan maksimal H+7 setelah acara berlangsung.
+        </p>
+    @endif
+
     <p>Silahkan hubungi WhatsApp kami jika ada pertanyaan lebih lanjut.</p>
 </body>
 
