@@ -96,8 +96,9 @@
                                                 <select class="form-select" name="lens_id" id="lens_id" required>
                                                     @foreach ($cameras->camera_types->lenses as $lens)
                                                         <option value="{{ $lens->id }}">{{ $lens->name }} [
-                                                            {{ $cameras->camera_types->name }} ] // Rp
-                                                            {{ number_format($lens->harga_per_hari, 0, ',', '.') }}</option>
+                                                            {{ $cameras->camera_types->name }} ] | Rp
+                                                            {{ number_format($lens->harga_per_hari, 0, ',', '.') }}
+                                                        </option>
                                                     @endforeach
                                                 </select>
                                                 @if ($errors->has('lens_id'))
