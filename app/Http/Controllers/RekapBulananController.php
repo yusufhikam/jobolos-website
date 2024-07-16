@@ -22,8 +22,8 @@ class RekapBulananController extends Controller
 
         // mengambil data booking berdasarkan tahun dari request
         $booking = Booking::whereHas('payments', function ($query) {
-                $query->where('status', 'approved');
-            })
+            $query->where('status', 'approved');
+        })
             ->whereYear('tanggal', $year)
             ->whereMonth('tanggal', $month)
             ->get();
@@ -43,7 +43,10 @@ class RekapBulananController extends Controller
         $monthName = Carbon::createFromFormat('m', $month)->translatedFormat('F');
 
         // mengambil data booking berdasarkan tahun dari request
-        $booking = Rental::whereYear('tgl_sewa', $year)
+        $booking = Rental::whereHas('rentalPayments', function ($query) {
+            $query->where('status_pembayaran', 'approved');
+        })
+            ->whereYear('tgl_sewa', $year)
             ->whereMonth('tgl_sewa', $month)
             ->orWhere(function ($query) use ($year, $month) {
                 $query->whereYear('tgl_kembali', $year)
