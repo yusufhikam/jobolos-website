@@ -130,7 +130,7 @@
                                                         <p class="text-center">Rp
                                                             {{ number_format($bookList->sisa_harga, 0, ',', '.') }}</p>
                                                     @else
-                                                        <p> LUNAS </p>
+                                                        <p class="text-center"> LUNAS </p>
                                                     @endif
                                                 </td>
                                             </tr>
