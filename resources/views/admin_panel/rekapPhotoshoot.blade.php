@@ -129,6 +129,8 @@
                                                     @if ($bookList->sisa_harga != 0)
                                                         <p class="text-center">Rp
                                                             {{ number_format($bookList->sisa_harga, 0, ',', '.') }}</p>
+                                                    @else
+                                                        <p> LUNAS </p>
                                                     @endif
                                                 </td>
                                             </tr>
