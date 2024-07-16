@@ -17,6 +17,7 @@ class Booking extends Model
         'status_pembayaran',
         'payment_type',
         'total_harga',
+        'sisa_harga',
     ];
 
     use HasFactory;

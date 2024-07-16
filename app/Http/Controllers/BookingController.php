@@ -41,6 +41,11 @@ class BookingController extends Controller
         $user = auth()->user();
         $package = Package::find($package_id);
 
+        // menghitung total harga yang harus dibayar
+        $total_harga = $this->hitungTotalHarga($package_id, $payment_type, $locationType);
+        // jika pembayaran adalah dp maka akan menghitung sisa yang harus dibayar nanti
+        $sisa_harga = $payment_type === 'dp' ? $package->harga - $total_harga : 0;
+
         $bookingData = [
             'user_id' => auth()->id(),
             'package_id' => $package_id,
@@ -50,7 +55,8 @@ class BookingController extends Controller
             'concept' => $request->concept,
             'payment_type' => $payment_type,
             'payment_status' => 'pending',
-            'total_harga' => $this->hitungTotalHarga($package_id, $payment_type, $locationType),
+            'total_harga' => $total_harga,
+            'sisa_harga' => $sisa_harga,
         ];
 
         $booking = Booking::create($bookingData);
@@ -74,7 +80,7 @@ class BookingController extends Controller
     {
         $package = Package::findOrFail($package_id);
         $hargaPackage = $package->harga;
-        $biayaTambahan = 250000; // biaya tambahan 500000
+        $biayaTambahan = 250000; // biaya tambahan 250000
 
 
         // Jika location_type 'other', tambahkan biaya tambahan
@@ -110,7 +116,8 @@ class BookingController extends Controller
 
         $events = $bookings->map(function ($booking) {
             return [
-                'title' => $booking->status == 'completed' ? 'COMPLETED' : 'BOOKED',                'start' => $booking->tanggal,
+                'title' => $booking->status == 'completed' ? 'COMPLETED' : 'BOOKED',
+                'start' => $booking->tanggal,
                 // 'end' => $booking->tanggal,
                 'allDay' => true,
             ];

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class RekapBulananController extends Controller
 {
+    // METHOD UNTUK MENAMPILKAN REKAP BULANAN PHOTOSHOOT
     public function show(Request $request)
     {
         Carbon::setLocale('id');
@@ -25,6 +26,8 @@ class RekapBulananController extends Controller
             ->get();
         return view('/admin_panel/rekapPhotoshoot', compact('booking', 'month', 'year', 'monthName'));
     }
+
+    // METHOD UNTUK MENAMPILKAN REKAP BULANAN PENYEWAAN KAMERA
 
     public function show_rental(Request $request)
     {
