@@ -228,9 +228,14 @@ class CameraController extends Controller
         }
 
         // menghapus data kamera dari database
-        $cameras->delete();
+        if ($cameras->rentals->count() > 0) {
+            Alert::error('Oops!', 'Anda tidak dapat menghapus data kamera ini, karena data kamera telah terekam pada Rentals');
+            return redirect('/admin_panel/adminManageCamera');
+        } else {
+            $cameras->delete();
 
-        Alert::success('Berhasil!', 'Data Kamera dan File terkait telah dihapus');
-        return redirect('/admin_panel/adminManageCamera');
+            Alert::success('Berhasil!', 'Data Kamera dan File terkait telah dihapus');
+            return redirect('/admin_panel/adminManageCamera');
+        }
     }
 }
