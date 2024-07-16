@@ -249,6 +249,13 @@
                             <p>{{ $booking->bookings->payment_type == 'full' ? 'Full Payment' : 'DP' }}</p>
                             <p class="item-price">Rp {{ number_format($booking->bookings->total_harga, 0, ',', '.') }}
                             </p>
+
+                            @if ($booking->bookings->payment_type == 'dp')
+                                <h6 class="text-primary label-title">Total Pelunasan :</h6>
+                                <p class="item-price">Rp
+                                    {{ number_format($booking->bookings->sisa_harga, 0, ',', '.') }}
+                                </p>
+                            @endif
                         </td>
                         <td>
                             <h6 class="text-primary label-title">Status Payment :</h6>
@@ -257,11 +264,7 @@
                     </tr>
                 </table>
 
-                @if ($booking->bookings->payment_type == 'dp')
-                    <h6 class="text-primary label-title">Total Pelunasan :</h6>
-                    <p class="item-price">Rp {{ number_format($booking->bookings->sisa_harga, 0, ',', '.') }}
-                    </p>
-                @endif
+
 
 
                 @if ($booking->bookings->payment_type == 'dp')
