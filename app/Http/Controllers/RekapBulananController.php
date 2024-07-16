@@ -21,7 +21,10 @@ class RekapBulananController extends Controller
         $monthName = Carbon::createFromFormat('m', $month)->translatedFormat('F');
 
         // mengambil data booking berdasarkan tahun dari request
-        $booking = Booking::whereYear('tanggal', $year)
+        $booking = Booking::whereHas('payments', function ($query) {
+                $query->where('status', 'approved');
+            })
+            ->whereYear('tanggal', $year)
             ->whereMonth('tanggal', $month)
             ->get();
         return view('/admin_panel/rekapPhotoshoot', compact('booking', 'month', 'year', 'monthName'));
