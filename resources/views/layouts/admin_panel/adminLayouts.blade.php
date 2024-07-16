@@ -77,7 +77,7 @@
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Notifications Dropdown Menu -->
-                @php
+                {{-- @php
                     $unReadNotifications = Auth::user()->unreadNotifications;
                     $markAsReadNotifications = Auth::user()->marksAsread;
                 @endphp
@@ -102,7 +102,7 @@
                         @endforeach
                         <div class="dropdown-divider"></div>
                     </div>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link ml-4" data-widget="fullscreen" href="#" role="button">
                         <i class="fa fa-expand-arrows-alt"></i>
