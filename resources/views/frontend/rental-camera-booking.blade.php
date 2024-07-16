@@ -97,7 +97,7 @@
                                                     @foreach ($cameras->camera_types->lenses as $lens)
                                                         <option value="{{ $lens->id }}">{{ $lens->name }} [
                                                             {{ $cameras->camera_types->name }} ] | Rp
-                                                            {{ number_format($lens->harga_per_hari, 0, ',', '.') }}
+                                                            {{ number_format($lens->harga_per_hari, 0, ',', '.') }}/per day
                                                         </option>
                                                     @endforeach
                                                 </select>
