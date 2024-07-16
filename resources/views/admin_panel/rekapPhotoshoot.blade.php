@@ -126,8 +126,10 @@
                                                         {{ number_format($bookList->total_harga, 0, ',', '.') }}</p>
                                                 </td>
                                                 <td>
-                                                    <p class="text-center">Rp
-                                                        {{ number_format($bookList->sisa_harga, 0, ',', '.') }}</p>
+                                                    @if ($bookList->sisa_harga != 0)
+                                                        <p class="text-center">Rp
+                                                            {{ number_format($bookList->sisa_harga, 0, ',', '.') }}</p>
+                                                    @endif
                                                 </td>
                                             </tr>
                                         @endforeach
