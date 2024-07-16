@@ -82,7 +82,7 @@
                                     <tbody>
                                         @foreach ($booking as $bookList)
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
+                                                <td class="text-center">{{ $loop->iteration }}</td>
                                                 <td>
                                                     <div class="px-2 m-0">
                                                         <div class="row">
