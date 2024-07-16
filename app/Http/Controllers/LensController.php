@@ -59,9 +59,15 @@ class LensController extends Controller
 
         $lens = Lens::findOrFail($id);
 
-        $lens->delete();
+        if ($lens->rentals->count() > 0) {
+            Alert::error('Gagal !', 'Data Tipe Lensa ini telah terecord pada Rental');
+            return redirect('/admin_panel/adminManageLens');
+        } else {
 
-        Alert::success('Berhasil!', 'Data Tipe Lensa Telah di Hapus');
-        return redirect('/admin_panel/adminManageLens');
+            $lens->delete();
+
+            Alert::success('Berhasil!', 'Data Tipe Lensa Telah di Hapus');
+            return redirect('/admin_panel/adminManageLens');
+        }
     }
 }
