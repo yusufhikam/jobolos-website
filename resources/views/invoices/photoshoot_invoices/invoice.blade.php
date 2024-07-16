@@ -250,6 +250,8 @@
                             <p class="item-price">Rp {{ number_format($booking->bookings->total_harga, 0, ',', '.') }}
                             </p>
 
+                            <br>
+
                             @if ($booking->bookings->payment_type == 'dp')
                                 <h6 class="text-primary label-title">Total Pelunasan :</h6>
                                 <p class="item-price">Rp
@@ -269,7 +271,7 @@
 
                 @if ($booking->bookings->payment_type == 'dp')
                     <div class="text-center" style="margin-top: 20px; color: red;">
-                        <p>Pelunasan Pembayaran Photoshoot maksimal h+7 setelah acara. Seluruh File foto dapat
+                        <p>Pelunasan Pembayaran Photoshoot maksimal H+7 setelah acara. Seluruh File foto dapat
                             diakses setelah pembayaran Lunas.</p>
                     </div>
                 @endif
