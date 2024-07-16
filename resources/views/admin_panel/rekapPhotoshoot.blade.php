@@ -120,7 +120,7 @@
                                                     @if ($bookList->payment_type == 'dp')
                                                         <p class="text-center">DP</p>
                                                     @else
-                                                        <p class="text-center">Lunas</p>
+                                                        <p class="text-center">FULL PAYMENT</p>
                                                     @endif
                                                 </td>
                                                 <td>
