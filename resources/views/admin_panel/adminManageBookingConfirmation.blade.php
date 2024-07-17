@@ -196,12 +196,12 @@
                                         </td>
                                         <td class="text-center">
                                             @if ($bookList->status == 'pending')
-                                                <div class="bg-warning rounded p-1 " role="alert">
-                                                    <p style="font-size: 10pt;"><i
-                                                            class="fa-solid fa-triangle-exclamation"></i> Perlu
-                                                        dikonfirmasi
-                                                    </p>
-                                                </div>
+                                                {{-- <div class="bg-warning rounded p-1 " role="alert"> --}}
+                                                <p style="font-size: 10pt;" class="text-warning"><i
+                                                        class="fa-solid fa-triangle-exclamation"></i> Perlu
+                                                    dikonfirmasi
+                                                </p>
+                                                {{-- </div> --}}
                                             @elseif($bookList->status == 'approved')
                                                 <div class="bg-success rounded p-1" role="alert">
                                                     <p style="font-size: 10pt;"><i class="fa-solid fa-circle-check"></i>
