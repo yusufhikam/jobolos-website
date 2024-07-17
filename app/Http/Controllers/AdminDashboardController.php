@@ -23,7 +23,9 @@ class AdminDashboardController extends Controller
         $pendapatanPhotoshoot = Booking::whereHas('payments', function ($query) {
             $query->where('status', 'approved');
         })->whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))->sum('total_harga');
-        $pendapatanRental = Rental::whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))->sum('total_harga');
+        $pendapatanRental = Rental::whereHas('rentalPayments', function ($query) {
+            $query->where('status_pembayaran', 'approved');
+        })->whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))->sum('total_harga');
 
 
         return view('/admin_panel/adminDashboard', compact('newBooking', 'userRegistered', 'paymentConfirm', 'paymentRentalConfirm', 'newRentalBooking', 'pendapatanPhotoshoot', 'pendapatanRental'));
