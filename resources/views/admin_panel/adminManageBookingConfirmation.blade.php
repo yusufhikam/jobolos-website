@@ -203,10 +203,11 @@
                                                 </p>
                                                 {{-- </div> --}}
                                             @elseif($bookList->status == 'approved')
-                                                <div class="bg-success rounded p-1" role="alert">
-                                                    <p style="font-size: 10pt;"><i class="fa-solid fa-circle-check"></i>
-                                                        Telah dikonfirmasi</p>
-                                                </div>
+                                                {{-- <div class="bg-success rounded p-1" role="alert"> --}}
+                                                <p style="font-size: 10pt;" class="bg-success"><i
+                                                        class="fa-solid fa-circle-check"></i>
+                                                    Telah dikonfirmasi</p>
+                                                {{-- </div> --}}
                                             @else
                                                 <div class="bg-danger rounded p-1" role="alert">
                                                     <p style="font-size: 10pt;"><i class="fa-solid fa-circle-xmark"></i>
