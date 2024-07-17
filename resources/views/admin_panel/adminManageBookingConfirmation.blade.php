@@ -197,7 +197,7 @@
                                         <td class="text-center">
                                             @if ($bookList->status == 'pending')
                                                 {{-- <div class="bg-warning rounded p-1 " role="alert"> --}}
-                                                <p style="font-size: 10pt;"><i
+                                                <p style="font-size: 10pt;" class="bg-warning"><i
                                                         class="fa-solid fa-triangle-exclamation"></i> Perlu
                                                     dikonfirmasi
                                                 </p>
