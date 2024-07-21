@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BankAccount;
 use App\Models\Crew;
 use App\Models\Page;
+use App\Models\Slider;
 use App\Models\SubContent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -14,13 +15,16 @@ class BusinessPlanController extends Controller
 {
     public function index()
     {
+
+        // untuk data sliders
+        $sliders = Slider::paginate(5);
         // untuk data crew (page about us)
         $crews = Crew::paginate(5);
 
         // untuk data page transaction
         $akunBank = BankAccount::paginate(4);
 
-        return view('/admin_panel/adminManageContents', compact('crews', 'akunBank'));
+        return view('/admin_panel/adminManageContents', compact('crews', 'akunBank', 'sliders'));
     }
 
     // METHOD UNTUK MENAMBAHKAN DATA CREW

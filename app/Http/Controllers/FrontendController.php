@@ -12,6 +12,7 @@ use App\Models\Crew;
 use App\Models\Package;
 use App\Models\Photo;
 use App\Models\Rental;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -24,6 +25,8 @@ class FrontendController extends Controller
     // method untuk halaman HOME
     public function home()
     {
+        // untuk menampilkan data slider untuk carousel
+        $sliders = Slider::all();
         // untuk menampilkan 9 daftar album foto
         $albums = Album::with(['photos', 'category'])->latest()->limit(9)->get();
 
@@ -33,7 +36,7 @@ class FrontendController extends Controller
         }])
             ->inRandomOrder() // untuk mengambil data secara acak
             ->limit(4)->get();
-        return view('frontend.home', compact('albums', 'homeCameraInfo'));
+        return view('frontend.home', compact('albums', 'homeCameraInfo', 'sliders'));
     }
 
     // METHOD UNTUK HALAMAN ABOUT US

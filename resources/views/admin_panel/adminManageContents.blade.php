@@ -26,14 +26,36 @@
 
         <section class="content">
             <div class="container">
-                {{-- KONTEN HALAMAN ABOUT US --}}
+                {{-- halaman home slider --}}
                 <div class="row g-3">
+                    <div class="col-lg-4 card p-3 text-center">
+                        <h2 class="text-primary">Halaman Home</h2>
+                        <div class="card-body">
+                            <div class="row">
+                                <i class="fa-solid fa-house fa-4x mb-4 contents-icon"></i>
+                                <a href="{{ route('admin_panel.contentHome') }}" class="btn btn-primary contents-btn">Manage
+                                    Contents</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 card p-3 text-center">
+                        <h2 class="text-primary">Halaman About Us</h2>
+                        <div class="card-body">
+                            <div class="row">
+                                <i class="fa-solid fa-users fa-4x mb-4 contents-icon"></i>
+                                <a href="{{ route('admin_panel.contentHome') }}" class="btn btn-primary contents-btn">Manage
+                                    Contents</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- KONTEN HALAMAN ABOUT US --}}
                     <div class="col-lg-12 card p-3">
                         <h2 class="text-primary">Halaman About Us</h2>
                         <div class="card-body">
                             <div class="row g-2">
                                 <div class="col-lg-6">
-                                    <div class="col">
+                                    <div class="col border rounded p-3">
                                         <h4>Crew</h4>
                                         <form action="" method="POST" enctype="multipart/form-data">
                                             @csrf
@@ -117,7 +139,8 @@
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h5 class="modal-title" id="modalAboutUsLabel">Crew
+                                                                        <h5 class="modal-title" id="modalAboutUsLabel">
+                                                                            Crew
                                                                             Details</h5>
                                                                         <button type="button" class="btn-close"
                                                                             data-bs-dismiss="modal"
@@ -153,7 +176,8 @@
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h5 class="modal-title" id="modalAboutUsLabel">Crew
+                                                                        <h5 class="modal-title" id="modalAboutUsLabel">
+                                                                            Crew
                                                                             Details
                                                                         </h5>
                                                                         <button type="button" class="btn-close"
@@ -224,8 +248,8 @@
                         <h2 class="text-primary">Halaman Transaction</h2>
 
                         <h4>Bank Account</h4>
-                        <div class="row mt-2">
-                            <div class="col-lg-4">
+                        <div class="row mt-2 p-3">
+                            <div class="col-lg-4 border rounded p-3">
                                 <form action="{{ route('admin_panel.adminManageContents.Bank') }}" method="POST">
                                     @csrf
                                     <div class="form-floating mb-3">

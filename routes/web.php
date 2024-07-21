@@ -24,6 +24,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RekapBulananController;
 use App\Http\Controllers\RentalBookingConfirmationController;
 use App\Http\Controllers\RentalBookingReceived;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
 use App\Models\Booking;
@@ -198,6 +199,15 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::put('/admin_panel/adminManageContents/edit/bank/{id}', [BusinessPlanController::class, 'update_akunBank'])->name('admin_panel.adminManageContents.updateBank');
     // untuk delete data bank
     Route::delete('/admin_panel/adminManageContents/delete/bank-{id}', [BusinessPlanController::class, 'destroy_akunBank']);
+
+
+    // untuk menampilkan data slider
+    // Route::get('/admin_panel/adminManageContents', [SliderController::class, 'index_sliders'])->name('admin_panel.adminManageContents.slider');
+    // untuk upload foto slider
+    Route::post('/admin_panel/adminManageContents', [SliderController::class, 'store'])->name('admin_panel.sliderStore');
+    Route::delete('/admin_panel/adminManageContents/{id}', [SliderController::class, 'destroy'])->name('admin_panel.sliderDestroy');
+
+    Route::get('/admin_panel/contents/content-home', [SliderController::class, 'index'])->name('admin_panel.contentHome');
 
     // NOTIFICATION REDIRECT
     Route::get('/admin_panel/notification/{id}/redirect', [NotificationController::class, 'redirect']);
