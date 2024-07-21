@@ -52,7 +52,7 @@
                                         <img class="demo"
                                             src="{{ asset('/storage/admin_assets/gallery/' . $albums->title . '/' . $photo->name) }}"
                                             onclick="currentSlide({{ $index + 1 }})" alt=""
-                                            style="width: 150px; height: auto;">
+                                            style="width: 150px; height: auto;" type="button">
                                     </div>
                                 @endforeach
                             </div>
