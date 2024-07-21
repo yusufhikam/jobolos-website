@@ -46,7 +46,7 @@
     {{-- FULL CALENDAR JAVASCRIPT --}}
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
 
-    <link rel="stylesheet" href="{{ asset('css/client_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/storage/css/client_style.css') }}">
 
     <title>@yield('title')</title>
 </head>
