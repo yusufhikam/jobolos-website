@@ -17,7 +17,8 @@
                     @foreach ($albums->photos as $index => $photo)
                         <div class="gallery-item text-center">
                             <img src="{{ asset('/storage/admin_assets/gallery/' . $albums->title . '/' . $photo->name) }}"
-                                onclick="openModal();currentSlide({{ $index + 1 }})" class="hover-shadow img-fluid">
+                                onclick="openModal();currentSlide({{ $index + 1 }})" class="hover-shadow img-fluid"
+                                type="button">
                         </div>
                     @endforeach
                 </div>
