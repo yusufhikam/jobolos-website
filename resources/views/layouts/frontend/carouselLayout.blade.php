@@ -9,7 +9,8 @@
     <div class="carousel-inner">
         @foreach ($sliders as $index => $slider)
             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}" data-bs-interval="2000">
-                <img src="/storage/admin_assets/sliders/{{ $slider->image }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('/storage/admin_assets/sliders/' . $slider->image) }}" class="d-block w-100"
+                    alt="...">
                 {{-- @if ($index == 0)
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center brand-carousel">
