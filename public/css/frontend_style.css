@@ -1628,8 +1628,6 @@ h5 {
     flex-wrap: nowrap;
 }
 
-
-
 img.demo {
     opacity: 0.6;
     transition: opacity 0.5s ease, border-radius 0.5s ease;
