@@ -46,8 +46,20 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/generate', function () {
+    $targetFolder = base_path('storage/app/public');
+    $linkFolder = public_path('storage');
+
+    if (!file_exists($targetFolder)) {
+        return "Target folder does not exist: $targetFolder";
+    }
+
+    if (!file_exists(dirname($linkFolder))) {
+        return "Link folder parent directory does not exist: " . dirname($linkFolder);
+    }
+
     \Illuminate\Support\Facades\Artisan::call('storage:link');
-    echo 'ok';
+
+    return 'ok';
 });
 
 
