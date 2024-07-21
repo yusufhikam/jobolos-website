@@ -600,6 +600,21 @@ body {
     color: #fff;
 }
 
+.btn-detail-package {
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.btn-detail-package:focus {
+    outline: none;
+}
+
+.btn-detail-package:hover {
+    outline: none;
+    color: #218838;
+}
+
 .card-package {
     height: 100%;
 }
@@ -628,6 +643,7 @@ body {
 .card-photoshoot-package {
     height: 100%;
     width: 100%;
+    border-radius: 20px;
 }
 
 .card-photoshoot-package img {
@@ -635,12 +651,13 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 20px;
 
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .card-photoshoot-package .card-img-container-photoshoot img:hover {
-    transform: scale(1.1);
+    /* transform: scale(1); */
     filter: brightness(1.2);
     /* transition: filter 0.5s ease; */
 }
@@ -650,6 +667,8 @@ body {
     height: 400px;
     width: 100%;
 }
+
+
 
 /* DETAIL PACKAGE */
 .thumb-detail {
@@ -1475,3 +1494,157 @@ h5 {
 } */
 
 /* END HOME */
+
+
+/* STORIES */
+/* The Modal (background) */
+
+
+
+.gallery-item {
+    box-sizing: border-box;
+}
+
+
+.modal-stories {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(1.5px);
+    background-color: rgba(0, 0, 0, 0.248);
+    /* Slightly transparent background */
+}
+
+/* Modal Content */
+.modal-content-stories {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 0;
+}
+
+/* The Close Button */
+.close {
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #2DA700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 102;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+/* .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+} */
+
+.thumbnail {
+    display: inline-block;
+
+}
+
+.thumbnail-container {
+    padding: 14px;
+    margin-inline: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* padding: 10px; */
+    /* firefox */
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.thumbnail-container::-webkit-scrollbar {
+    display: none;
+}
+
+.thumbnail-container .row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+img.demo {
+    opacity: 0.6;
+    transition: opacity 0.5s ease, border-radius 0.5s ease;
+}
+
+img.active,
+img.demo:hover {
+    opacity: 1;
+    border-radius: 10px;
+}
+
+/* img.hover-shadow {
+    transition: 0.3s;
+} */
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
