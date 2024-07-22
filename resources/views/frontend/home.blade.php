@@ -79,7 +79,7 @@
             <div class="container-fluid justify-content-lg-between mt-3 why-us">
                 <div class="container">
                     <div class="row gy-4 p-5">
-                        <h2 class="text-center fw-bold">WHY US?</h2>
+                        {{-- <h2 class="text-center fw-bold">WHY US?</h2>
                         <div class="col-lg-3 text-center">
                             <div class=" jumbotrons-card ">
                                 <div class="card-body px-2">
@@ -144,10 +144,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div> --}}
                     </div>
                 </div>
-            </div>
-            {{-- <div class=" latest-camera">
+                {{-- <div class=" latest-camera">
                 <div class="img-container-camera">
                     <img src="/storage/frontend_assets/svg/bg-home-camera.svg" alt="" class="">
                     <div class="overlay-camera"></div>
