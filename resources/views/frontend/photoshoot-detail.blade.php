@@ -9,18 +9,18 @@
         </div>
 
         <section class="content mb-4 mt-5">
-            <div class="container my-5">
-                <div class="card card-photoshoot-detail">
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6 thumb-detail text-center">
+            <div class="container my-5d-inline-flex">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card card-photoshoot-detail">
+                            <div class="thumb-detail text-center">
                                 <div class="img-photoshoot-detail-container">
                                     <img src="{{ asset('storage/admin_assets/package/' . $package->image) }}" alt=""
                                         class="img-fluid w-100">
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="row">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-between " style="margin-top: 4rem;">
                                     <div class="container-fluid">
                                         <div class="card-title">
                                             <h4>Detail Package :</h4>
@@ -29,7 +29,7 @@
                                             <p>{!! htmlspecialchars_decode($package->deskripsi) !!}</p>
                                         </div>
                                         <div class="d-flex mx-3">
-                                            <div class="col-sm-12  col-lg-6 bg-warning rounded">
+                                            <div class="col-sm-12  col-lg-6 border rounded border-2">
                                                 <h5>Package Price</h5>
                                                 <h4 class=""><i class="fa-solid fa-tag"></i> IDR
                                                     {{ number_format($package->harga, 0, ',', '.') }}</h4>
@@ -40,17 +40,57 @@
                                 <div class="row mx-auto mt-3">
                                     <div class="col-sm-12 col-lg-12">
                                         <a href="/jobolos/contact/photoshoot-booking"
-                                            class="btn btn-success btn-lg btn-flat d-block p-3 ">
+                                            class="btn btn-success btn-lg  d-block p-3 ">
                                             <i class="fas fa-feather fa-lg mr-2 "></i>
-                                            Book Now!
+                                            Booking Now!
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
+                {{-- <div class="card card-photoshoot-detail">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="thumb-detail text-center">
+                                    <div class="img-photoshoot-detail-container">
+                                        <img src="{{ asset('storage/admin_assets/package/' . $package->image) }}"
+                                            alt="" class="img-fluid w-100">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="row">
+                                        <div class="container-fluid">
+                                            <div class="card-title">
+                                                <h4>Detail Package :</h4>
+                                            </div>
+                                            <div class="card-text mb-5">
+                                                <p>{!! htmlspecialchars_decode($package->deskripsi) !!}</p>
+                                            </div>
+                                            <div class="d-flex mx-3">
+                                                <div class="col-sm-12  col-lg-6 bg-warning rounded">
+                                                    <h5>Package Price</h5>
+                                                    <h4 class=""><i class="fa-solid fa-tag"></i> IDR
+                                                        {{ number_format($package->harga, 0, ',', '.') }}</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mx-auto mt-3">
+                                        <div class="col-sm-12 col-lg-12">
+                                            <a href="/jobolos/contact/photoshoot-booking"
+                                                class="btn btn-success btn-lg btn-flat d-block p-3 ">
+                                                <i class="fas fa-feather fa-lg mr-2 "></i>
+                                                Book Now!
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> --}}
                 <hr class="text-center m-auto text-success w-75 border-3 my-5">
             </div>
         </section>

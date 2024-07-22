@@ -12,7 +12,6 @@
             whatever you need we will give our best to capture your every precious moment with us. "</p>
         <section class="content ">
             <div class="container my-5">
-                <h3>halo</h3>
                 <div class="d-flex ">
                     <div class="row g-4 justify-content-center">
                         @foreach ($photoPackages as $pcg)
