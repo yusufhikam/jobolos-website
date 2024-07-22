@@ -78,7 +78,7 @@
             {{-- </div> --}}
             <div class="container-fluid justify-content-lg-between mt-3 why-us">
                 <div class="container">
-                    <div class="row gy-4 p-5">
+                    {{-- <div class="row gy-4 p-5">
                         <h2 class="text-center fw-bold">WHY US?</h2>
                         <div class="col-lg-3 text-center">
                             <div class=" jumbotrons-card ">
@@ -144,10 +144,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
-            <div class=" latest-camera">
+            {{-- <div class=" latest-camera">
                 <div class="img-container-camera">
                     <img src="/storage/frontend_assets/svg/bg-home-camera.svg" alt="" class="">
                     <div class="overlay-camera"></div>
@@ -165,13 +165,6 @@
                                 <div class="rental-img-container ">
                                     <img src="{{ asset('/storage/admin_assets/rental-kamera/camera/' . $camera->camera_types->brands->name . '/' . $camera->name . '/thumbnail/' . $camera->thumbnail) }}"
                                         class="card-img-top img-fluid" alt="...">
-                                    {{-- @if ($camera->rentals->isNotEmpty() && $camera->rentals->first()->status == 'active')
-                                        <div class="ribbon-wrapper ribbon-xl">
-                                            <div class="ribbon bg-primary text-md">
-                                                Currently Rented
-                                            </div>
-                                        </div>
-                                    @endif --}}
                                 </div>
                                 <div class="card-body">
                                     <h4>{{ $camera->camera_types->brands->name }} {{ $camera->name }}</h4>
@@ -194,7 +187,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
 
         </section>
     </div>
@@ -202,8 +195,8 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <img width="100" style="filter: invert(1);"
-                        src="/storage/frontend_assets/brand-logo/connect-us.svg" alt="">
+                    <img width="100" style="filter: invert(1);" src="/storage/frontend_assets/brand-logo/connect-us.svg"
+                        alt="">
                     <h2 class="text-white mb-5">Let's Connect With Us!</h2>
                     <div class="col-auto"><a href="/jobolos/contact" class="btn btn-success fw-bolder btn-flat p-3 w-50"
                             id="submitButton" type="submit">BOOKING NOW!</a></div>
