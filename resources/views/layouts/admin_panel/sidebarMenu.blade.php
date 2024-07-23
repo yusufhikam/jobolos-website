@@ -59,13 +59,13 @@
                             <p>Manage Users</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="/admin_panel/adminManageContents"
                             class="nav-link {{ Route::is(['admin_panel.adminManageContents', 'admin_panel.contentHome']) ? 'active' : '' }}">
                             <i class="fa fa-solid fa-pen-to-square nav-icon"></i>
                             <p>Manage Contents</p>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a href="/admin_panel/Rekap-Photoshoot"
                             class="nav-link {{ Route::is('admin_panel.adminPhotoshootRekap') ? 'active' : '' }}">
