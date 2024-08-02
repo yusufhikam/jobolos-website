@@ -25,7 +25,7 @@ class BookingController extends Controller
         // $package = Booking::with('packages')->get();
 
 
-        return view('frontend.photoshoot-booking', compact('bookedDates', 'paket'));
+        return view('frontend.contact', compact('bookedDates', 'paket'));
     }
 
 

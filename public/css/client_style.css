@@ -15,7 +15,7 @@ padding: 0; */
 
 body {
     min-height: 100vh;
-    background: #ffffff;
+    background: #fcfcfc;
     /* background: url('/storage/frontend_assets/background/bg-home.jpg') no-repeat; */
     background-size: cover;
     background-position: center;

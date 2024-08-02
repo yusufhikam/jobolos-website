@@ -18,13 +18,19 @@ class BusinessPlanController extends Controller
 
         // untuk data sliders
         $sliders = Slider::paginate(5);
-        // untuk data crew (page about us)
-        $crews = Crew::paginate(5);
 
         // untuk data page transaction
         $akunBank = BankAccount::paginate(4);
 
-        return view('/admin_panel/adminManageContents', compact('crews', 'akunBank', 'sliders'));
+        return view('/admin_panel/adminManageContents', compact('akunBank', 'sliders'));
+    }
+
+    // menampilkan data pada halaman content about
+    public function index_about()
+    {
+        $about = Crew::paginate(5);
+
+        return view('/admin_panel/contents/content-about', compact('about'));
     }
 
     // METHOD UNTUK MENAMBAHKAN DATA CREW
@@ -95,7 +101,7 @@ class BusinessPlanController extends Controller
 
         Alert::success('Berhasil !', 'Data crew telah di Update');
 
-        return redirect('admin_panel/adminManageContents');
+        return redirect('admin_panel/contents/content-about');
     }
 
     // METHOD UNTUK MENGHAPUS DATA CREW DAN MENGHAPUS FILE FOTO YANG BERADA DI DIRECTORY

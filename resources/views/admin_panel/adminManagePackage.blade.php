@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-2">Photoshoot Packages List</h1>
+                    <h1 class="m-2">Kelola Photoshoot Packages</h1>
                     <hr>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
@@ -118,7 +118,7 @@
                                         aria-labelledby="staticBackdropLabel{{ $pcg->id }}" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-scrollable">
                                             <div class="modal-content">
-                                                <div class="modal-header bg-success">
+                                                <div class="modal-header ">
                                                     <h1 class="modal-title fs-5 m-auto"
                                                         id="staticBackdropLabel{{ $pcg->id }}">
                                                         Photoshoot Packages Detail</h1>
@@ -151,7 +151,7 @@
                                                         </div>
                                                         <div class="row-auto">
                                                             <h5>Deskripsi Paket : </h5>
-                                                            <div class="card bg-success-subtle text-start p-2">
+                                                            <div class="card bg-secondary-subtle text-start p-2">
                                                                 <p>{!! htmlspecialchars_decode($pcg->deskripsi) !!}</p>
                                                             </div>
                                                         </div>

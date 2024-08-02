@@ -224,6 +224,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::delete('/admin_panel/adminManageContents/{id}', [SliderController::class, 'destroy'])->name('admin_panel.sliderDestroy');
 
     Route::get('/admin_panel/contents/content-home', [SliderController::class, 'index'])->name('admin_panel.contentHome');
+    Route::get('/admin_panel/contents/content-about', [BusinessPlanController::class, 'index_about'])->name('admin_panel.contentAbout');
 
     // NOTIFICATION REDIRECT
     Route::get('/admin_panel/notification/{id}/redirect', [NotificationController::class, 'redirect']);
@@ -272,7 +273,7 @@ Route::get('/jobolos/contact', function () {
 })->name('frontend.contact');
 
 // Photoshoot Booking Form
-Route::get('/jobolos/contact/photoshoot-booking', [BookingController::class, 'booking'])->name('frontend.photoshoot-booking');
+Route::get('/jobolos/contact', [BookingController::class, 'booking'])->name('frontend.contact');
 // untuk menampilkan data yang sudah booking di calendar
 Route::get('/jobolos/photoshoot-info/getBookings', [BookingController::class, 'getBookings']);
 // untuk update data calendar berdasarkan status
@@ -286,6 +287,7 @@ Route::get('/jobolos/rental-camera-booking/{id}/{name}', [BookingRentalCameraCon
 // halaman yang hanya bisa diakses user yang sudah login dan memiliki role 'customer'
 Route::middleware(['auth', 'role:customer'])->group(function () {
     Route::post('/jobolos/contact/photoshoot-booking', [BookingController::class, 'createBooking'])->name('frontend.photoshoot-booking');
+    Route::post('/jobolos/contact', [BookingController::class, 'createBooking']);
 
     // PHOTOSHOOT BOOKING MANAGE
     Route::get('/frontend/dashboard', [FrontendController::class, 'home'])->name('frontend.dashboard');
@@ -304,15 +306,15 @@ Route::middleware(['auth', 'role:customer'])->group(function () {
     // RENTAL CAMERA BOOKING MANAGE
 
     // untuk menampilkan daftar transaksi
-    Route::get('/jobolos/rental-transactions', [TransactionController::class, 'index_rental'])->name('frontend.rental-transactions');
-    // untuk melakukan pemesanan booking rental kamera
-    Route::post('/jobolos/rental-camera-booking', [BookingRentalCameraController::class, 'store_booking'])->name('frontend.rental-booking');
-    // untuk menampilkan history booking rental kamera
-    Route::get('/jobolos/transactions/history-rental-booking', [TransactionController::class, 'show_rental']);
-    // untuk upload bukti pembayaran
-    Route::post('/jobolos/rental-transactions/payment/{id}', [PaymentRentalCameraController::class, 'uploadBukti'])->name('frontend.rental-transactions.payment');
-    // untuk update bukti pembayaran rental kamera jika tidak valid
-    Route::put('/jobolos/rental-transactions/payment/{id}', [PaymentRentalCameraController::class, 'updateBukti'])->name('frontend.rental-transactions.payment');
-    // untuk update pesanan dibatalkan
-    Route::put('/jobolos/rental-transactions/cancel/{id}', [TransactionController::class, 'cancelRentalBooking']);
+    // Route::get('/jobolos/rental-transactions', [TransactionController::class, 'index_rental'])->name('frontend.rental-transactions');
+    // // untuk melakukan pemesanan booking rental kamera
+    // Route::post('/jobolos/rental-camera-booking', [BookingRentalCameraController::class, 'store_booking'])->name('frontend.rental-booking');
+    // // untuk menampilkan history booking rental kamera
+    // Route::get('/jobolos/transactions/history-rental-booking', [TransactionController::class, 'show_rental']);
+    // // untuk upload bukti pembayaran
+    // Route::post('/jobolos/rental-transactions/payment/{id}', [PaymentRentalCameraController::class, 'uploadBukti'])->name('frontend.rental-transactions.payment');
+    // // untuk update bukti pembayaran rental kamera jika tidak valid
+    // Route::put('/jobolos/rental-transactions/payment/{id}', [PaymentRentalCameraController::class, 'updateBukti'])->name('frontend.rental-transactions.payment');
+    // // untuk update pesanan dibatalkan
+    // Route::put('/jobolos/rental-transactions/cancel/{id}', [TransactionController::class, 'cancelRentalBooking']);
 });

@@ -90,8 +90,13 @@
             </div>
             <a href="/jobolos/about"style="--i:1;" class="{{ Request::is('jobolos/about') ? 'active' : '' }}">About
                 Us</a>
+            <a href="/jobolos/contact"style="--i:3;"
+                class="{{ Request::is('jobolos/contact') ? 'active' : '' }}">Contact
+                Us</a>
+            <a href="/jobolos/package-info/photoshoot-packages"style="--i:4;"
+                class="{{ Request::is('/jobolos/package-info/photoshoot-packages') ? 'active' : '' }}">Packages</a>
 
-            <div class="dropdowns" style="--i:3;">
+            {{-- <div class="dropdowns" style="--i:3;">
                 <a href="/jobolos/contact"
                     class="dropbtn {{ Request::is('jobolos/contact') || Request::is('jobolos/contact/photoshoot-booking') || Request::is('jobolos/rental-camera-booking/{id}/{name}') ? 'active' : '' }}">Contact
                     <i class="fa fa-solid fa-caret-down"></i></a>
@@ -105,8 +110,8 @@
                             a Camera</a>
                     </li>
                 </ul>
-            </div>
-            <div class="dropdowns" style="--i:4;">
+            </div> --}}
+            {{-- <div class="dropdowns" style="--i:4;">
                 <a href="/jobolos/package-info"
                     class="dropbtn {{ Request::is('jobolos/package-info') || Request::is('jobolos/package-info/camera-info') || Request::is('jobolos/package-info/photoshoot-packages') ? 'active' : '' }}">Package
                     <i class="fa fa-solid fa-caret-down"></i></a>
@@ -119,7 +124,7 @@
                             Rental</a></li>
 
                 </ul>
-            </div>
+            </div> --}}
             {{-- auth untuk pengecekan apakah pengguna sudah login atau belum
                 cara ini lebih bersih penulisannya daripada 'Auth::check()'
                 --}}
@@ -244,20 +249,30 @@
     {{-- FULL CALENDAR JAVASCRIPT --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                events: '/jobolos/photoshoot-info/getBookings',
-                eventDidMount: function(info) {
-                    var now = new Date();
-                    var eventDate = new Date(info.event.start);
+            var calendar;
 
-                    if (eventDate < now.setHours(0, 0, 0, 0)) {
-                        info.el.style.display = 'none'; // Hide the event element
+            // Function to initialize the calendar
+            function initializeCalendar() {
+                var calendarEl = document.getElementById('calendar');
+                calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    events: '/jobolos/photoshoot-info/getBookings',
+                    eventDidMount: function(info) {
+                        var now = new Date();
+                        var eventDate = new Date(info.event.start);
+
+                        if (eventDate < now.setHours(0, 0, 0, 0)) {
+                            info.el.style.display = 'none'; // Hide the event element
+                        }
                     }
-                }
+                });
+                calendar.render();
+            }
+
+            // Event listener to initialize the calendar when modal is shown
+            $('#exampleModal').on('shown.bs.modal', function() {
+                initializeCalendar();
             });
-            calendar.render();
         });
     </script>
 

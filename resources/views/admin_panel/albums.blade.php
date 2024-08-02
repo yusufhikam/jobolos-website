@@ -15,9 +15,9 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right m-2">
                         <li class="breadcrumb-item "><a href="/admin_panel/adminDashboard">Admin Dashboard</a></li>
-                        <li class="breadcrumb-item "><a href="/admin_panel/adminManageGallery">Album Gallery Management</a>
+                        <li class="breadcrumb-item "><a href="/admin_panel/adminManageGallery">Kelola Galeri Foto</a>
                         </li>
-                        <li class="breadcrumb-item active">Album Foto</li>
+                        <li class="breadcrumb-item active">Detail Galeri Foto</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->

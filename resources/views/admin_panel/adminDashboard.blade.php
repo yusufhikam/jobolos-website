@@ -30,7 +30,7 @@
                 <div class="row mt-3 p-3 border border-2 my-3 rounded">
 
                     <!-- ./col -->
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-6 col-12">
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
@@ -45,7 +45,7 @@
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-6 col-12">
                         <!-- small box -->
                         <div class="small-box bg-success-subtle text-dark">
                             <div class="inner">
@@ -60,7 +60,7 @@
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-12">
+                    {{-- <div class="col-lg-4 col-12">
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
@@ -74,7 +74,7 @@
                             <a href="/admin_panel/Rekap-Rental" class="small-box-footer">Rekap Data Bulanan <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-lg-6 col-12">
                         <!-- small box -->
@@ -108,8 +108,7 @@
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-12">
-                        <!-- small box -->
+                    {{-- <div class="col-lg-6 col-12">
                         <div class="small-box bg-success">
                             <div class="inner">
                                 <h3>{{ $newRentalBooking }}</h3>
@@ -124,10 +123,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <!-- small box -->
                         <div class="small-box bg-success-subtle text-dark">
                             <div class="inner">
-                                {{-- <h3>53<sup style="font-size: 20px">%</sup></h3> --}}
                                 <h3>{{ $paymentRentalConfirm }}</h3>
 
                                 <p>Rental Camera Payments Confirmation</p>
@@ -139,7 +136,7 @@
                                 class="small-box-footer text-success">More info
                                 <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>

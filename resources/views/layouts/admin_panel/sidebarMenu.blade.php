@@ -40,7 +40,7 @@
                         : '' }}">
                     <i class="nav-icon fas fa-laptop-file"></i>
                     <p>
-                        Manajemen Bisnis
+                        Kelola Data
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
@@ -56,16 +56,16 @@
                         <a href="/admin_panel/adminManageUser"
                             class="nav-link {{ Route::is(['admin_panel.adminManageUser', 'admin_panel.admin-add-user']) ? 'active' : '' }}">
                             <i class="fa-solid fa-users nav-icon"></i>
-                            <p>Manage Users</p>
+                            <p>Kelola Users</p>
                         </a>
                     </li>
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a href="/admin_panel/adminManageContents"
                             class="nav-link {{ Route::is(['admin_panel.adminManageContents', 'admin_panel.contentHome']) ? 'active' : '' }}">
                             <i class="fa fa-solid fa-pen-to-square nav-icon"></i>
-                            <p>Manage Contents</p>
+                            <p>Kelola Contents</p>
                         </a>
-                    </li> --}}
+                    </li>
                     <li class="nav-item">
                         <a href="/admin_panel/Rekap-Photoshoot"
                             class="nav-link {{ Route::is('admin_panel.adminPhotoshootRekap') ? 'active' : '' }}">
@@ -73,13 +73,13 @@
                             <p>Rekap Photoshoot</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="/admin_panel/Rekap-Rental"
                             class="nav-link {{ Route::is('admin_panel.adminRentalRekap') ? 'active' : '' }}">
                             <i class="fa-solid fa-book nav-icon"></i>
                             <p>Rekap Rental Kamera</p>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
 
@@ -104,15 +104,13 @@
                     </p>
                 </a>
                 <ul class="nav nav-treeview">
-
-
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="/admin_panel/adminManageCategory"
                             class="nav-link {{ Route::is(['admin_panel.adminManageCategory', 'admin_panel.admin-add-category']) ? 'active' : '' }}">
                             <i class="fa-solid fa-table-cells nav-icon"></i>
                             <p>Category</p>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a href="/admin_panel/adminManageGallery"
                             class="nav-link {{ Route::is(['admin_panel.adminManageGallery']) ? 'active' : '' }}">
@@ -131,7 +129,7 @@
                         <a href="/admin_panel/adminManageBookingReceived"
                             class="nav-link {{ Route::is(['admin_panel.adminManageBookingReceived']) ? 'active' : '' }}">
                             <i class="fa-regular fa-calendar-check nav-icon"></i>
-                            <p>Booking Received</p>
+                            <p>Pesanan Masuk</p>
                             @if ($bookingReceived)
                                 <span class="position-absolute top-0 end-0  badge  bg-danger">
                                     {{ $bookingReceived }}
@@ -145,7 +143,7 @@
                         <a href="/admin_panel/adminManageBookingConfirmation"
                             class="nav-link {{ Route::is(['admin_panel.adminManageBookingConfirmation', 'admin_panel.adminManageBookingConfirmation.detail']) ? 'active' : '' }}">
                             <i class="fa-solid fa-cart-plus nav-icon"></i>
-                            <p>Booking Confirmation</p>
+                            <p>Konfirmasi Pembayaran</p>
                             @if ($paymentConfirm)
                                 <span class="position-absolute top-0 end-0  badge  bg-danger">
                                     {{ $paymentConfirm }}
@@ -158,7 +156,7 @@
             </li>
 
             {{-- DASHBOARD RENTAL KAMERA  --}}
-            <li class="nav-item menu-open">
+            {{-- <li class="nav-item menu-open">
                 <a href="#"
                     class="nav-link {{ Route::is([
                         'admin_panel.adminManageCamera',
@@ -226,7 +224,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
     </nav>
 </div>

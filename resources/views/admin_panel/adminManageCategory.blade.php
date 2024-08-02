@@ -9,12 +9,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-2">Kategori List</h1>
+                    <h1 class="m-2">Kelola Kategori Foto</h1>
                     <hr>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right m-2">
-                        <li class="breadcrumb-item active">Kategori List</li>
+                        <li class="breadcrumb-item"><a href="/admin_panel/adminManageGallery">Kelola Galeri Foto</a></li>
+                        <li class="breadcrumb-item active">Kelola Kategori Foto</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -25,12 +26,11 @@
             <div class="container-fluid">
                 <div class="row my-3 ms-2 me-2 justify-content-between ">
                     <div class=" col-auto mb-2">
-                        <a href="/admin_panel/admin-add-category">
-                            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Tambah Kategori</button>
-                        </a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-plus"></i> Tambah Kategori </button>
                     </div>
                 </div>
-
 
                 <div class="table-responsive">
                     <table class="table table-bordered">
@@ -88,6 +88,32 @@
 
                     <div class="mt-2">
                         {{ $kategori->withQueryString()->links() }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Formulir Tambah Kategori Foto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="POST">
+                                @csrf
+                                <div class="col-auto">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="name">Nama Kategori</label>
+                                        <input type="text" class="form-control" name="name" id="name"
+                                            value="{{ old('name') }}" required autocomplete="off">
+                                    </div>
+                                    <div class="float-end mt-3">
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,12 +9,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-2">Booking Confirmation List</h1>
+                    <h1 class="m-2">Kelola Konfirmasi Pembayaran</h1>
                     <hr>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right m-2">
-                        <li class="breadcrumb-item active">Booking List</li>
+                        <li class="breadcrumb-item active">Kelola Konfirmasi Pembayaran</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
