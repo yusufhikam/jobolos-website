@@ -39,8 +39,7 @@
                                 </div>
                                 <div class="row mx-auto mt-3">
                                     <div class="col-sm-12 col-lg-12">
-                                        <a href="/jobolos/contact/photoshoot-booking"
-                                            class="btn btn-success btn-lg  d-block p-3 ">
+                                        <a href="/jobolos/contact" class="btn btn-success btn-lg  d-block p-3 ">
                                             <i class="fas fa-feather fa-lg mr-2 "></i>
                                             Booking Now!
                                         </a>
